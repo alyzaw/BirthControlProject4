@@ -11,23 +11,21 @@ import decimal
 import flask
 from flask import Flask, jsonify, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from config import endpoint, username, password, instance, port
-
 from googlesearch import search_news
 
 import pymysql
 pymysql.install_as_MySQLdb()
-is_prod = os.environ.get('IS_HEROKU', None)
 
-if is_prod:
-    endpoint = os.environ.get('endpoint')
-    instance = os.environ.get('instance')
-    password = os.environ.get('password')
-    port = os.environ.get('port')
-    username = os.environ.get('username')
-else:
+is_prod = os.environ.get('IS_HEROKU', None)	
+
+if is_prod:	
+    endpoint = os.environ.get('endpoint')	
+    instance = os.environ.get('instance')	
+    password = os.environ.get('password')	
+    port = os.environ.get('port')	
+    username = os.environ.get('username')	
+else:	
     from config import endpoint, username, password, instance, port
-
 
 dburl = f'mysql://{username}:{password}@{endpoint}:{port}/{instance}'
 
