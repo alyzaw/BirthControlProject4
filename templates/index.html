@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Birth Control Review</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee+Shade'rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+              </button>               
+              </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/"><span class="glyphicon glyphicon-home"></span> Birth Control Review</a></li>
+                    <li ><a href="/table"><span class="glyphicon glyphicon-list-alt"></span> User Reviews</a></li>
+                    <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
+                    <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
+                    <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+                </ul>              
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+     
+            <!-- <br>
+            <br> -->
+            <div class="hero hero-home text-center">
+                    <!-- <br><br> -->
+                <h1>Birth Control Review</h1>
+                <br>
+                <p>Exploring the side effects</p>
+              </div>
+                 
+            <br>
+            <br>
+
+
+                <!-- Page content -->
+                <div class="container">
+                    <div id="intro">
+                    <div class="text-center">
+                    <h2>Welcome to the wide world of</h2><br>
+
+                    <h1 data-heading="Slide">Birth Control</h1>
+
+                    <h3>We know it can be overwhelming to find a method that works for you, so we’re here to help.</h3><br>
+                            
+                    <h3>Using birth control can come with unwelcome side effects. 
+                    The pamphlets in your OB/GYN’s office don’t always paint a clear picture of how it
+                    might affect your life. That’s why we’ve parsed through thousands of user reviews to learn 
+                    about the real experiences of using different birth control methods.</h3><br>
+                    
+                    <h3>Choose an option below to begin exploring:</h3><br>
+                    
+                    <!-- Check out real user reviews, sort through the various methods of female contraception, and search for comments about specific side effects.
+                    Delve into our analysis of the birth control experience. Learnt which side effects appear to be most common for each method, which options users are most satisfied with, and which options fall behind.
+                    What does the future of contraception look like? -->
+                </div>
+
+                    <!-- <div class="row">
+                        <section id="wrapper">
+
+                            
+                
+                            <article>
+                                <p>
+                                    Accoding to a survey by the Center for Disease Control, two-thirds of women of child bearing age are using some form of contraception.
+                                While this includes non-medicinal methods such as condoms or surgical sterilization, a huge portion of those women are using medications as their method of birth control.
+                            These medications are know for having a wide array of side effects, often having a significant impact on the users life. 
+                        Information dispersed by pharmaceutical companies and medical professionals is often vague and generalized. While the side effects listed for each method of birth control
+                    often look identical to each other, the actual usesr experience can vary significantly. We wanted to look at user reviews to gauge if the actual user experience on the different available 
+                    birth control methods differed from each other, and if there were any options that were noticable better or worse than others. We decided to collect user reviews for various methods of birth control, to see if we could analyze feedback 
+                    provided by women and discover trends that arise within the reported experiences women have with each birth control option currently on the market. </p> <br>
+                                     
+                                <p>
+                                     We scraped our data from two sites, EverydayHealth.com and Drugs.com, and used the information collected for the rest of our analysis<br>
+               
+                                </p>
+                
+                            </article>
+                        </section>
+                
+                    </div> -->
+                
+                    <br><br>
+                    
+                    </div>
+
+                    <div class="row" style="text-align: center">
+                        <div class="site-nav">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                            <a href="/table"><h3><em>User Reviews</em></h3></a>
+                            <a href="/table"><button><img src="../static/css/contraception-thoughts-button.jpg" /></button></a>
+                            <p><em>Check out real user reviews, sort through the various methods of female contraception, 
+                                    and search for comments about specific side effects.</em></p>
+                                </div>
+
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <a href="/side_effects"><h3><em>Side Effect Analysis</em></h3></a>
+                                <a href="/side_effects"><button><img src="../static/css/bc3-button.jpg" /></button></a>
+                                <p><em>Delve into our analysis of the birth control experience. Learn which side effects 
+                                        are mentioned the most for each method, which options users are most satisfied with, and 
+                                        which options fall behind.</em></p>
+                                    </div>
+
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <a href="/news"><h3><em>Recent News</em></h3></a>
+                                    <a href="/news"><button><img src="../static/css/dude-pill-button.jpg" /></button></a>
+                                    <p><em>What does the future of contraception look like?</em></p>
+                                        </div>
+                                </div>
+                            </div>
+  
+<hr>
+
+
+                    <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-2">
+                            <button id="button">
+                                <img src="../static/css/pill_glyph.PNG" />
+                             </button>
+                             <select id="selDataset" onchange="optionChanged(this.value)">
+                                <option value="Combination Pill">Combination Pill</option>
+                                <option value="Progestin Pill">Progestin Pill</option>
+                          </select> -->
+                          <!-- <p><em>Pill</em></p> -->
+                        <!-- </div>
+                        <div class="col-xs-4 col-sm-4 col-md-2">
+                            <button id="button">
+                                <img src="../static/css/iud_glyph.PNG" />
+                             </button>
+                             <select id="selDataset" onchange="optionChanged(this.value)">
+                                <option value="Hormonal IUD">Hormonal IUD</option>
+                                <option value="Non-Hormonal IUD">Non-hormonal IUD</option>
+                          </select> -->
+                          <!-- <p><em>IUD</em></p> -->
+                        <!-- </div>
+                        <div class="col-xs-4 col-sm-4 col-md-2">
+                            <button id="button">
+                                <img src="../static/css/ring_glyph.PNG" />
+                             </button> -->
+                          <!-- <p><em>Ring</em></p> -->
+                        <!-- </div>
+                        <div class="col-xs-4 col-sm-4 col-md-2">
+                            <button id="button">
+                                <img src="../static/css/patch_glyph.PNG" />
+                             </button> -->
+                          <!-- <p><em>Patch</em></p> -->
+                        <!-- </div>
+                          <div class="col-xs-4 col-sm-4 col-md-2">
+                            <button id="button">
+                                <img src="../static/css/shot_glyph.PNG" />
+                             </button> -->
+                          <!-- <p><em>Shot</em></p> -->
+                        <!-- </div>
+                        <div class="col-xs-4 col-sm-4 col-md-2">
+                            <button id="button">
+                                <img src="../static/css/implant_glyph.PNG" />
+                             </button> -->
+                          <!-- <p><em>Implant</em></p> -->
+                        <!-- </div>
+                        </div>
+                        </div>
+                    </div> -->
+                
+                        <br><br>
+
+                        <!-- <div class="row">
+                                <button id="myButton" onclick="onClick(this.value)">
+                                <option value="Combination Pill">Combination Pill</option></button>
+                            </div>
+
+                            <br><br>
+                            <input type="button" value="Implant" onclick="dosomething(this.value)">
+
+                            <br><br>
+
+
+                            <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-2">
+                            <div class="col-xs-4 col-sm-4 col-md-2">
+
+                            <button id="button" value='Ring' onclick="dosomething(this.value)">
+                                    <img src="../static/css/ring_glyph.PNG" />
+                                 </button></div> -->
+
+
+                                 <div class="container">
+                                        <div class="row" style="text-align: center">
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                                <button id="button" value='Combination Pill' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/pill_glyph.PNG" />
+                                                </button>
+                                              <!-- <p><em>Pill</em></p> -->
+                                            </div>
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                                    <button id="button" value='Progestin Pill' onclick="dosomething(this.value)">
+                                                        <img src="../static/css/pill_glyph.PNG" />
+                                                    </button>
+                                                  <!-- <p><em>Pill</em></p> -->
+                                                </div>
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                                <button id="button" value='Hormonal IUD' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/iud_glyph.PNG" />
+                                                 </button>
+                                              <!-- <p><em>IUD</em></p> -->
+                                            </div>
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                            <button id="button" value='Non-hormonal IUD' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/iud_glyph.PNG" />
+                                                 </button>
+                                              <!-- <p><em>IUD</em></p> -->
+                                            </div>
+                                        </div>
+                                        <div class="row" style="text-align: center">
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                                <button id="button" value='Ring' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/ring_glyph.PNG" />
+                                                 </button>
+                                              <!-- <p><em>Ring</em></p> -->
+                                            </div>
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                                <button id="button" value='Patch' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/patch_glyph.PNG" />
+                                                 </button>
+                                              <!-- <p><em>Patch</em></p> -->
+                                            </div>
+                                              <div class="col-xs-3 col-sm-3 col-md-3">
+                                                <button id="button" value='Shot' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/shot_glyph.PNG" />
+                                                 </button>
+                                              <!-- <p><em>Shot</em></p> -->
+                                            </div>
+                                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                                <button id="button" value='Implant' onclick="dosomething(this.value)">
+                                                    <img src="../static/css/implant_glyph.PNG" />
+                                                 </button>
+                                              <!-- <p><em>Implant</em></p> -->
+                                            </div>
+                                            </div>
+                                        </div>    
+                                    </div>                             
+                
+                        <!-- <div class="container-fluid"> -->
+                            <!-- <div class="row"> -->
+                
+                
+                                <!-- Page content -->
+                                <!-- <div class="content">
+                                </div>
+                            </div>
+                
+                
+                
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="well">
+                                        <h5>Select a birth control method to learn more</h5>
+                                        <select id="selDataset" onchange="optionChanged(this.value)">
+                                            <option value="All Methods">All</option>
+                                            <option value="Shot">Shot</option>
+                                            <option value="Hormonal IUD">Hormonal IUD</option>
+                                            <option value="Non-Hormonal IUD">Non-hormonal IUD</option>
+                                            <option value="Combination Pill">Combination Pill</option>
+                                            <option value="Progestin Pill">Progestin Pill</option>
+                                            <option value="Patch">Patch</option>
+                                            <option value="Ring">Ring</option>
+                                            <option value="Implant">Implant</option>
+                                      </select>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"></h3>
+                                        </div>
+                                        <div id="method-data" class="panel-body"></div>
+                                    </div>
+                                </div></div> -->
+
+
+                                <!-- <div class="container-fluid">
+                                    <h1>See what people are saying about their birth control</h1>
+                                    <br><br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe width="560" height="318" src="https://www.youtube.com/embed/z2pAQytp-Cc"
+                                        frameborder="5px" allowfullscreen></iframe>
+                                    </div><br>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe width="560" height="318" src="https://www.youtube.com/embed/n3zmPZk66AY"
+                                        frameborder="px" allowfullscreen></iframe>
+                                  </div> <br>
+                                </div> 
+                                  <div class="col-md-4">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe width="560" height="318" src="https://www.youtube.com/embed/9ZoiNOgSAMI"
+                                            frameborder="px" allowfullscreen></iframe>
+                                      </div><br>
+                                      <div class="embed-responsive embed-responsive-16by9">
+                                      <iframe width="560" height="318" src="https://www.youtube.com/embed/rGnCZoqR6hQ"
+                                      frameborder="px" allowfullscreen></iframe>
+                                      </div><br>
+                                    </div>
+                                    <div class="col-md-4">
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe width="560" height="318" src="https://www.youtube.com/embed/EYDIOHJN0jw"
+                                                    frameborder="px" allowfullscreen></iframe>
+                                            </div><br>
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe width="560" height="318" src="https://www.youtube.com/embed/zpaldoUv9qM"
+                                                    frameborder="px" allowfullscreen></iframe>
+                                          </div> <br>
+                                        </div>      
+                                </div>
+                            </div>  -->
+
+                            <!-- <div id="sidebar">
+                                            <section id="contact" class="section">
+                                                <h2>Contact US</h2>
+                                                <article>
+                                                    <form>
+                                                    <h5>Contact form
+                                                        </h5>
+                                                        <div class="form-group">
+                                                            
+                                                     <label for="Name">Name:</label>
+                                                                <input id="Name" name="Name" type="text" placeholder="Name" class="form-control">
+                                                    </div>
+                                                            
+                                                    <label for="Email">Email:</label>
+                                                    <input id="Email" name="Email" type="email" placeholder="Email" class="form-control">
+                                                        
+                                                            
+                                                    <label for="Message">Message:</label>
+                                                    <textarea id="Message" name="Message" rows="5" cols="50"></textarea>
+                                                    <div class="row">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                     </div> -->
+                                    <!-- </div>
+                                </form>
+                            </aside> -->
+                
+                                        <!-- </div>
+                                    </div> -->
+                
+                                    <!-- <footer id="footer">
+                                        ProjectTeam3 Birth Control Review
+                                    </footer> -->
+                
+                                        <!-- </div> -->
+                
+                
+                                
+                
+                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                        crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                        crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                        crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+                
+                        <script src="{{ url_for('static', filename='js/geninfo.js') }}"></script> 
+                </body>
+                
+                </html>

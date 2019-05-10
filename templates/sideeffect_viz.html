@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<head>
+	<meta charset="utf-8" />
+	<title>Side Effect Analysis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script> -->
+	<link rel="stylesheet" href="static/css/style.css" />
+	
+	<link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Bungee+Shade'rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+              </button>               
+              </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/"><span class="glyphicon glyphicon-home"></span> Birth Control Review</a></li>
+                    <li ><a href="/table"><span class="glyphicon glyphicon-list-alt"></span> User Reviews</a></li>
+                    <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
+                    <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
+                    <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+                </ul>              
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+					</nav>
+					
+					<br>
+					<br>
+					<div class="hero hero-page3 text-center">
+							<h1>Side Effect Analysis</h1>
+							<br>
+							<p>How do they compare?</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<br>
+
+        <script>
+                function onChange(input) {
+                  if (input == "All") {
+                    buildGraph("sentiment_all");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_all");
+                  }
+                  if (input == "Shot") {
+                    buildGraph("sentiment_shot");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_shot");
+                  }
+                  if (input == "Hormonal IUD"){
+                    buildGraph("sentiment_hormonal_iud");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_hormonal_iud");
+                  }
+                  if (input == "Non-hormonal IUD"){
+                    buildGraph("sentiment_non_hormonal_iud");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_non_hormonal_iud");
+                  }
+                  if (input == "Combination Pill"){
+                    buildGraph("sentiment_combination_pill");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_combination_pill");
+                  }
+                  if (input == "Progestin Pill"){
+                    buildGraph("sentiment_progestin_pill");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_progestin_pill");
+                  }
+                  if (input == "Patch") {
+                    buildGraph("sentiment_patch");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_patch");
+                  }
+                  if (input == "Ring"){
+                    buildGraph("sentiment_ring");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_ring");
+                  }
+                  if (input == "Implant"){
+                    buildGraph("sentiment_implant");
+                    buildPie(input);
+                    buildWC("/wordcount/wc_implant");
+          
+                  }
+          
+                  try
+                  {
+                    wordcloud_svg = document.getElementById("wordcloud_svg");
+          
+										wordcloud_svg.remove()
+										
+										// bar_svg = document.getElementById("bar-chart");
+          
+										// bar_svg.remove();
+									}
+
+									
+                  catch(e)
+                  {
+                    console.log(e);
+                  }
+          
+                }
+								</script>
+
+<!-- <div class="panel panel-default">
+		<div class="panel-body">
+				<div class="col-md-6 text-center">
+					<h3>Analysis for</h3>
+				</div> -->
+
+		<!-- <div id="wordcloudSpot" height="900" width="600"></div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+								
+		<div class="dropdown text-center">
+		<h2>Choose a birth control method to see the analysis</h2>
+				<select id="selDataset" onchange="onChange(this.value)">
+				<option value="All">All</option>
+				<option value="Shot">Shot</option>
+				<option value="Hormonal IUD">Hormonal IUD</option>
+				<option value="Non-hormonal IUD">Non-hormonal IUD</option>
+				<option value="Combination Pill">Combination Pill</option>
+				<option value="Progestin Pill">Progestin Pill</option>
+				<option value="Patch">Patch</option>
+				<option value="Ring">Ring</option>
+				<option value="Implant">Implant</option>
+			</select>
+		</div>
+		<br>
+
+				<div class="panel panel-default">
+						<div class="panel-body bar_chart">
+									<div class="col-xs-12 col-sm-12 col-md-6 text-center">
+											<!-- <svg id="barsvg"></svg> -->
+									<svg id="barsvg" width="760" height="600"></svg>
+									<!-- <div id="tooltip" class="d3-tip tooltip"></div> -->
+								</div>
+								<div class="col-md-1 text-right"></div>
+										<div class="col-xs-12 col-sm-12 col-md-5 text-right">
+									<div class="chart-container" style="position: relative; height:500px; width:500px">
+										<!-- <div id="plot"></div> -->
+										<canvas id="myChart" width="40" height="40"></canvas>
+									</div></div>
+						</div>
+
+		<br>
+
+			<p>In this bar chart, we looked at all the possible side effects we saw 
+				listed by pharmaceutical and in user reviews, and looked at how many times 
+				each of these side effects were mentioned in user review. We also wanted to
+				measure this again the Vader Sentiment score to see where these terms were 
+				mentioned in reviews that were positive or negative.
+				<p></p>You can select different methods to see the occurrences of these terms filtered just for that method.
+				Weight and bleeding are almost universally the most commonly mentioned side effects in user reviews, 
+				with emotional side effects like mood swings and depression generally coming up high on the list as well. 
+				However, reviews that mentioned weight were more evenly distributed across the sentiment scale, so it's 
+				likely some women either lost weight, or were happy with they're chosen method of birth control despite 
+				weight changes. If course reviews that takes about depression and sadness we almost always very negative.</p>
+		 </div>
+
+
+		 <div id="wordcloudSpot" height="450" width="600"></div>
+		 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		 <hr>			 
+	 
+	<div class="container text-center">
+				<div id="intro2">
+		 <!-- <div class="text-center"> -->
+				<h1 data-heading="Slide">Top 5</h1><br>
+				<h2>What were the top most talked about side effects for each method?</h2>
+
+
+	<div id="topFive">
+	<div class="panel panel-default">
+			<div class="panel-body"></div>
+			<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+							<h3>Shot</h3>
+							<ul><li style="color:#85C441" >weight/bloating</li>
+								<li style="color:#85C441" >bleeding</li>
+								<li style="color:#812443">mood swings</li>
+								<li style="color:#812443">depression/anxiety</li>
+								<li style="color:#2FBCB3">painful</li>
+							</ul>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+						<h3>Hormonal IUD</h3>
+						<ul><li style="color:#2FBCB3">painful</li>
+							<li style="color:#85C441" >bleeding</li>
+							<li style="color:#85C441">cramps</li>
+							<li style="color:#85C441" >weight/bloating</li>
+							<li style="color:#85C441">spotting</li>
+						</ul>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+					<h3>Non-hormonal IUD</h3>
+					<ul><li style="color:#85C441" >bleeding</li>
+						<li style="color:#2FBCB3">cramps</li>
+						<li style="color:#2FBCB3">painful</li>
+						<li style="color:#85C441" >weight/bloating</li>
+						<li style="color:#85C441">spotting</li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+		<h3>Combination Pill</h3>
+		<ul><li style="color:#85C441" >weight/bloating</li>
+			<li style="color:#85C441" >acne</li>
+			<li style="color:#812443">depression/anxiety</li>
+			<li style="color:#812443">mood swings</li>
+			<li style="color:#85C441" >bleeding</li>
+		</ul>
+			</div></div>
+					<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+							<h3>Progestin Pill</h3>
+							<ul><li style="color:#85C441" >bleeding</li>
+								<li style="color:#85C441" >weight/bloating</li>
+								<li style="color:#812443">depression/anxiety</li>
+								<li style="color:#812443">mood swings</li>
+								<li style="color:#2FBCB3">cramps</li>
+							</ul>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+						<h3>Patch</h3>
+						<ul><li style="color:#812443">mood swings</li>
+							<li style="color:#85C441" >weight/bloating</li>
+							<li style="color:#85C441" >bleeding</li>
+							<li style="color:#2FBCB3">headaches/migraines</li>
+							<li style="color:#2FBCB3">nausea</li>
+						</ul>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+					<h3>Ring</h3>
+					<ul><li style="color:#85C441" >weight/bloating</li>
+						<li style="color:#812443">mood swings</li>
+						<li style="color:#812443">depression/anxiety</li>
+						<li style="color:#85C441" >bleeding</li>
+						<li style="color:#812443">change in libido</li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-3 text-left">
+		<h3>Implant</h3>
+		<ul><li style="color:#85C441" >weight/bloating</li>
+			<li style="color:#812443">mood swings</li>
+			<li style="color:#85C441" >bleeding</li>
+			<li style="color:#812443">depression/anxiety</li>
+			<li style="color:#85C441" >acne</li>
+		</ul>
+			</div>
+	</div>
+</div>
+</div>
+
+	<div class="panel panel-default">
+			<div class="panel-body"></div>
+			<h2>How do they stack up?</h2>
+			<p>blah blah blah</p></div></div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<!-- <script src="{{ url_for('static', filename='app.js') }}"></script> -->
+	<!-- </div> -->
+	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script>
+	<script>
+		d3v4 = d3;
+		window.d3 = null;
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+	<script>
+		d3v3 = d3;
+		window.d3 = null;
+
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+	<script src="static/js/pie.js"></script>
+	<script src="static/js/sideeffect.js"></script>
+	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+
+
+
+
+<style>
+	.x.axis path {
+		display: none;
+	}
+</style>
+
+	<!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+	<script src="static/js/d3cloud.js"></script>
+	<script>
+    function buildWC(WC_input){
+		var marg = { top: 20, right: 20, bottom: 40, left: 20 },
+			wid = 860 - marg.left - marg.right,
+			heig = 550 - marg.top - marg.bottom;
+		d3v3.json(WC_input, function(error, data) {
+            console.log("data", data);
+			var categories = d3v3.keys(
+				d3v3
+					.nest()
+					.key(function(d) {
+						return d.category;
+					})
+					.map(data)
+			);
+			var color = d3v3.scale.ordinal().range(['#FFD87D', '#85C441', '#F05179', '#2FBCB3']);
+			var fontSize = d3v3.scale
+				.pow()
+				.exponent(5)
+				.domain([0, 1])
+				.range([10, 80]);
+
+
+				if (WC_input == "/wordcount/wc_all") {
+					var layout = d3v3.layout
+					.cloud()
+					.timeInterval(10)
+					.size([wid, heig])
+					.words(data)
+					.rotate(function(d) {
+						return 0;
+					})
+					.font('monospace')
+					.fontSize(function(d) {
+						return d.effects / 40 + 10;
+					})
+					.text(function(d) {
+						return d.words;
+					})
+					.spiral('archimedean')
+					.on('end', draw)
+					.start();
+			} else if (WC_input == "/wordcount/wc_hormonal_iud") {
+					var layout = d3v3.layout
+					.cloud()
+					.timeInterval(10)
+					.size([wid, heig])
+					.words(data)
+					.rotate(function(d) {
+						return 0;
+					})
+					.font('monospace')
+					.fontSize(function(d) {
+						return d.effects / 18 + 10;
+					})
+					.text(function(d) {
+						return d.words;
+					})
+					.spiral('archimedean')
+					.on('end', draw)
+					.start();
+				} else if (WC_input == "/wordcount/wc_shot") {
+					var layout = d3v3.layout
+					.cloud()
+					.timeInterval(10)
+					.size([wid, heig])
+					.words(data)
+					.rotate(function(d) {
+						return 0;
+					})
+					.font('monospace')
+					.fontSize(function(d) {
+						return d.effects / 10 + 10;
+					})
+					.text(function(d) {
+						return d.words;
+					})
+					.spiral('archimedean')
+					.on('end', draw)
+					.start();
+						} else { 
+				var layout = d3v3.layout
+					.cloud()
+					.timeInterval(10)
+					.size([wid, heig])
+					.words(data)
+					.rotate(function(d) {
+						return 0;
+					})
+					.font('monospace')
+					.fontSize(function(d) {
+						return d.effects/4 + 10;
+					})
+					.text(function(d) {
+						return d.words;
+					})
+					.spiral('archimedean')
+					.on('end', draw)
+					.start();
+			}			
+
+			var svg = d3v3
+				// .select('body')
+				.select('#wordcloudSpot')
+				.append('svg')
+				.attr('width', wid + marg.left + marg.right)
+                .attr('height', heig + marg.top + marg.bottom)
+								.attr('id', 'wordcloud_svg')
+								// .attr('class', 'panel')
+				.append('g')
+				.attr('transform', 'translate(' + marg.left + ',' + marg.top + ')');
+			var wordcloud = svg
+				.append('g')
+				.attr('class', 'wordcloud')
+				.attr('transform', 'translate(' + wid / 2 + ',' + heig / 2 + ')');
+			var x0 = d3v3.scale
+				.ordinal()
+				.rangeRoundBands([0, wid], 0.1)
+				.domain(categories);
+			var xAxis = d3v3.svg
+				.axis()
+				.scale(x0)
+				.orient('bottom');
+			svg.append('g')
+				.attr('class', 'x axis')
+				.attr('transform', 'translate(0,' + heig + ')')
+				.call(xAxis)
+				.selectAll('text')
+				.style('font-size', '20px')
+				.style('fill', function(d) {
+					return color(d);
+				})
+				.style('font', 'sans-serif');
+			function draw(words) {
+				wordcloud
+					.selectAll('text')
+					.data(words)
+					.enter()
+					.append('text')
+					.attr('class', 'word')
+					.style('font-size', function(d) {
+						return d.size + 'px';
+					})
+					.style('font-family', function(d) {
+						return d.font;
+					})
+					.style('fill', function(d) {
+						var paringObject = data.filter(function(obj) {
+							return obj.words === d.text;
+						});
+						return color(paringObject[0].category);
+					})
+					.attr('text-anchor', 'middle')
+					.attr('transform', function(d) {
+						return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')';
+					})
+					.text(function(d) {
+						return d.text;
+					});
+			}
+        });
+		};
+		
+		function init(){
+      buildWC("/wordcount/wc_all")
+    };
+		init();
+	</script>
+
+
+<br><br>
+<!-- <footer id="footer">Birth Control Team</footer> -->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+</body>
+</html>
