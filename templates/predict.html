@@ -59,10 +59,10 @@
               <br>
               <div class="dropdown text-center">
                     <h2>Age</h2>
-                            <select id="selDataset1" onchange="input1Change(this.value)">
+                            <select id="selDataset1" >
                             <option value="15">15</option>
                             <option value="16">16</option>
-                            <option value="17">17</option>
+                            <option value="40">40</option>
                             <option value="Non-hormonal IUD">Non-hormonal IUD</option>
                             <option value="Combination Pill">Combination Pill</option>
                             <option value="Progestin Pill">Progestin Pill</option>
@@ -74,7 +74,7 @@
                     <br>
                     <div class="dropdown text-center">
                           <h2>Marital Status</h2>
-                                  <select id="selDataset2" onchange="input2Change(this.value)">
+                                  <select id="selDataset2" >
                                   <option value="1">1</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -89,7 +89,7 @@
                           <br>
                           <div class="dropdown text-center">
                                 <h2>Race</h2>
-                                        <select id="selDataset3" onchange="input3Change(this.value)">
+                                        <select id="selDataset3" >
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -105,7 +105,7 @@
                           <br>
                           <div class="dropdown text-center">
                                 <h2>Highest Education</h2>
-                                        <select id="selDataset4" onchange="input4Change(this.value)">
+                                        <select id="selDataset4" >
                                         <option value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="Hormonal IUD">Hormonal IUD</option>
@@ -118,13 +118,23 @@
                                     </select>
                                 </div>
 
+                                <div id="result">
+
+                                    <img id = "result-img"/>
+                                    <span id="result-text">foo
+                                    </span>
+    
+                                </div>
+
 
                                       <button id="button" value='Submit' onclick="makePredictions()">Submit
                                             <!-- <img src="../static/css/pill_glyph.PNG" /> -->
                                         </button>
         
 
-              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              
+              
+                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
               crossorigin="anonymous"></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
               crossorigin="anonymous"></script>
