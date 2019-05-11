@@ -173,18 +173,24 @@
 
 		<br>
 
-			<p>In this bar chart, we looked at all the possible side effects we saw 
-				listed by pharmaceutical and in user reviews, and looked at how many times 
-				each of these side effects were mentioned in user review. We also wanted to
-				measure this again the Vader Sentiment score to see where these terms were 
-				mentioned in reviews that were positive or negative.
-				<p></p>You can select different methods to see the occurrences of these terms filtered just for that method.
-				Weight and bleeding are almost universally the most commonly mentioned side effects in user reviews, 
-				with emotional side effects like mood swings and depression generally coming up high on the list as well. 
-				However, reviews that mentioned weight were more evenly distributed across the sentiment scale, so it's 
-				likely some women either lost weight, or were happy with they're chosen method of birth control despite 
-				weight changes. If course reviews that takes about depression and sadness we almost always very negative.</p>
-		 </div>
+		 <div class="text-center" style= "font-weight: bold; width: 90%; padding-left: 10%">
+			<p>The above charts evaluate the side effects and overall attitudes reflected in our user reviews. 
+				Use the dropdown menu above to see the data for each of the primary methods of birth control.</p>
+			<p>In our bar chart, we can see how often certain side effects are mentioned in the reviews. 
+					The stacked colors in the bar represent the overall sentiment of the specific review where that 
+					side effect was found, so we can gauge how users are feeling about each specific side effect.
+					<p>Our pie chart looks at user’s disposition towards their birth control, and breaks down how many 
+					reviews were positive, negative, or neutral.</p>
+					<p></p>
+					<p style= "font-size: 16px" ><em>*To determine the sentiment of each review, we used the VADER Sentiment Analysis 
+					<a href="https://github.com/cjhutto/vaderSentiment" target="_blank">VADER Sentiment Analysis</a>, 
+					which uses sophisticated algorithms to assess the level of positivity in a body of text.</em></p><br>
+
+					<p>Below we can visualize which side effects are mentioned most often for each method of birth control, based on the size of each term.
+						Terms are color coded into different categories of side effects, so we can get an impression of whether each method is more likely 
+						to result in painful or emotional side effects, health issues, or body changes.</p>
+				</div>
+			</div>
 
 
 		 <div id="wordcloudSpot" height="450" width="600"></div>
