@@ -59,7 +59,7 @@ def find_output(input_tuple):
     output = model.loc[model['Input'] == input_tuple]
     returned_output = output.iloc[0,2]
     output_str = str(returned_output)
-    return output_str
+    return jsonify({"data": output_str})
 
 @app.route("/predictions")
 def predictions():

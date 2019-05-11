@@ -145,6 +145,27 @@ text-shadow:
     1px 1px 0 #85C441;
     }
 
+    .hero-page5 {
+      position: relative;
+      height: 450px;
+      padding: 20px;
+      margin: 0;
+      background-image: url("../css/woman_iud.jpg");
+      background-position: bottom center;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: left;
+      font-size: 28px;  
+      font-family: 'Chivo';
+      color: #812443;
+      text-shadow:
+      -3px -3px 0 #2FBCB3,
+      1px -1px 0 #2FBCB3,
+      -1px 1px 0 #2FBCB3,
+      1px 1px 0 #2FBCB3;
+      }
+
 .hero h1 {
   font-size: 58px;  
   font-weight: bold;

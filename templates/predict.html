@@ -40,6 +40,7 @@
                     <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
                     <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
                     <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+                    <li><a href="/predictions"><span class="glyphicon glyphicon-user"></span> Predictions</a></li>
                 </ul>              
               </div>
               <!-- /.navbar-collapse -->
@@ -49,16 +50,16 @@
      
             <br>
             <br>
-            <div class="hero hero-page4 text-center">
+            <div class="hero hero-page5 text-center">
                     <!-- <br><br> -->
                     <h1>Can our AI guess your contrapcetion?</h1>
-                    <p>Watch our trained model makes its best attempt!</p>
+                    <!-- <p>Watch our trained model makes its best attempt!</p> -->
               </div>
 
               <br>
               <div class="dropdown text-center">
                     <h2>Age</h2>
-                            <select id="selDataset" onchange="input1Change(this.value)">
+                            <select id="selDataset1" onchange="input1Change(this.value)">
                             <option value="15">15</option>
                             <option value="16">16</option>
                             <option value="17">17</option>
@@ -73,7 +74,7 @@
                     <br>
                     <div class="dropdown text-center">
                           <h2>Marital Status</h2>
-                                  <select id="selDataset" onchange="input2Change(this.value)">
+                                  <select id="selDataset2" onchange="input2Change(this.value)">
                                   <option value="1">1</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -87,8 +88,24 @@
                           </div>
                           <br>
                           <div class="dropdown text-center">
+                                <h2>Race</h2>
+                                        <select id="selDataset3" onchange="input3Change(this.value)">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="Non-hormonal IUD">Non-hormonal IUD</option>
+                                        <option value="Combination Pill">Combination Pill</option>
+                                        <option value="Progestin Pill">Progestin Pill</option>
+                                        <option value="Patch">Patch</option>
+                                        <option value="Ring">Ring</option>
+                                        <option value="Implant">Implant</option>
+                                    </select>
+                                </div>
+                                <br>
+                          <br>
+                          <div class="dropdown text-center">
                                 <h2>Highest Education</h2>
-                                        <select id="selDataset" onchange="input3Change(this.value)">
+                                        <select id="selDataset4" onchange="input4Change(this.value)">
                                         <option value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="Hormonal IUD">Hormonal IUD</option>
@@ -100,22 +117,7 @@
                                         <option value="Implant">Implant</option>
                                     </select>
                                 </div>
-                                <br>
-                                <div class="dropdown text-center">
-                                      <h2>Race</h2>
-                                              <select id="selDataset" onchange="input4Change(this.value)">
-                                              <option value="1">1</option>
-                                              <option value="2">2</option>
-                                              <option value="3">3</option>
-                                              <option value="Non-hormonal IUD">Non-hormonal IUD</option>
-                                              <option value="Combination Pill">Combination Pill</option>
-                                              <option value="Progestin Pill">Progestin Pill</option>
-                                              <option value="Patch">Patch</option>
-                                              <option value="Ring">Ring</option>
-                                              <option value="Implant">Implant</option>
-                                          </select>
-                                      </div>
-                                      <br>
+
 
                                       <button id="button" value='Submit' onclick="makePredictions()">Submit
                                             <!-- <img src="../static/css/pill_glyph.PNG" /> -->
