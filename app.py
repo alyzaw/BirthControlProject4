@@ -48,6 +48,19 @@ metadata = MetaData(engine, reflect=True)
 birth_control = metadata.tables["birth_control_all"]
 side_effects = metadata.tables["side_effects_db"]
 #print(birth_control)
+model = None
+def load_outcomes():
+    global model
+    model = pd.read_csv('combo_pd.csv')
+load_outcomes()
+
+@app.route("/mlm/<input_tuple>")
+def find_output(input_tuple):
+    output = model.loc[model['Input'] == input_tuple]
+    returned_output = output.iloc[0,2]
+    output_str = str(returned_output)
+    return output_str
+
 
 @app.route("/")
 def home():
