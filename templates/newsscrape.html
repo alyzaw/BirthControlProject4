@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee+Shade'rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+              </button>               
+              </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/"><span class="glyphicon glyphicon-home"></span> Birth Control Review</a></li>
+                    <li ><a href="/table"><span class="glyphicon glyphicon-list-alt"></span> User Reviews</a></li>
+                    <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
+                    <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
+                    <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+                </ul>              
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+     
+            <br>
+            <br>
+            <div class="hero hero-page4 text-center">
+                    <!-- <br><br> -->
+                    <p>What is the status of</p>
+                    <h1>Male Contraception?</h1>
+              </div>
+                 
+            <br>
+            <br>
+<!-- 
+            <div id="intro3">
+                <div class="text-center">
+                <h2>Will we ever see</h2>
+                <h1 data-heading="Slide">Male Contraception</h1>
+                <h2>become commercially available?</h2></div></div> -->
+
+            <div class="panel panel-default">
+                    <div class="panel-body">
+                    <div class="col-md-12 text-left">
+                    <br>
+            <div class="wrapper">
+              <div class="col-md-12">
+                  <h1 style="text-align:center;">Will we ever see male birth control become commercially available?</h1>
+                  <h2 style="text-align:left;float:left;">Check out the latest news:</h2>
+                  <h2 style="text-align:right;float:right;">Our reactions on the progress:</h2>
+
+                    <div class="col-md-6 text-left">
+                        <h4> <a href={{recentNews.site1}} target="_blank">{{recentNews.site1}}</a></h3>
+                        <h4> <a href={{recentNews.site2}} target="_blank">{{recentNews.site2}}</a></h3>
+                        <h4> <a href={{recentNews.site3}} target="_blank">{{recentNews.site3}}</a></h3>
+                        <h4> <a href={{recentNews.site4}} target="_blank">{{recentNews.site4}}</a></h3>
+                        <h4> <a href={{recentNews.site5}} target="_blank">{{recentNews.site5}}</a></h3>
+                        <h4> <a href={{recentNews.site6}} target="_blank">{{recentNews.site6}}</a></h3>
+                        <h4> <a href={{recentNews.site7}} target="_blank">{{recentNews.site7}}</a></h3>
+                        <h4> <a href={{recentNews.site8}} target="_blank">{{recentNews.site8}}</a></h3>
+                      <br>
+                      <h2>Lets see what our Machine Overlords think about contraceptions (real reviews written by AI):</h2>
+                      <marquee behavior="scroll" height = 180 direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+                          "I have been on Nuvaring for 2 years now and I thought it would have had a little weight gain. I did not have any problems and I don't get pregnant. I had the mirena a little sick and I didn't have to worry about taking it for a month and a half and have no weight gain but I love it." -Cortana
+                        <br>
+                        <br>
+                          "I was on the pill for almost 2 years and I am having to remember to take the pill and as soon as I started taking this birth control to the point where I still get the pain. I have been on the pill for about a year and a half ago. I have had my period for almost a year now. " -MOLL-E
+                        <br>
+                        <br>
+                          "The insertion was the worst pain of the pain. I also had a slight cramp and was prescribed the IUD and I realized it would be a few days of my life and it works out of me." -Janie 5
+                        <br>
+                        <br>
+                        "I had the IUD for about a year and a half and have not had a period for about 3 months and I didn't have any side effects that I had the pill to the point where I had to get rid of the pain. It was a little more emotional. It was incredibly painful to have sex for a week." -Alexa
+                        <br>
+                        <br>
+                        "I have been on Nexplanon for a year and a half and I have not had a period and I was so super light bleeding and started to spot and then the second month I had to go back to this pill and the pain was horrible! I had my period a few months ago and I have never had any problems before." -S.O.P.H.I.E.
+                        <br>
+                        <br>
+                          "I had it in for about a year. I would not recommend this to anyone. -Ava
+                        <br>
+                        <br>
+                          "I have been on this for about two months now. I had the Mirena inserted again and I was losing and I am almost 18 and would say that the pain is a little different than the pill. I started to realize the constant breakouts for a year and a half and it was fine. " -Emma 2
+                        <br>
+                        <br>
+                          "I have been on the shot for a little over a year and a half and have a lot of pain on my body and I don't even want to get pregnant I have a consideration of the depo shot!" -Siri
+                        <br>
+                        <br>
+                          "I was on the patch for about 6 months now. I did not have to worry about birth control and the only side effect I have experienced severe blood loss and mood swings, and my doctor said I am so happy to say that I have not had any problems with the insertion." -Motoko Kusanagi
+                      </marquee>
+                        <br>
+                      </div>
+
+                      <div class="col-md-6 text-center">
+                          <div style="text-align:right;margin-right: 20px">
+                              <!-- <iframe src="https://giphy.com/embed/xT9IgAr64UiCRYbKco" width="320" height="320"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/httpsalmiannatumblrcom-xT9IgAr64UiCRYbKco">via GIPHY</a></p> -->
+                              <iframe src="https://giphy.com/embed/26his5i9YJTqsqCyY" width="320" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hulu-desperate-housewives-26his5i9YJTqsqCyY">via GIPHY</a></p>
+                              <iframe src="https://giphy.com/embed/kKJPqpMcIS4daGA0kl" width="320" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cbc-schittscreek-schitts-creek-kKJPqpMcIS4daGA0kl">via GIPHY</a></p>
+                            </div> 
+                      </div> 
+                  <div class="col-md-6 text-left">
+                      <h2>Well in the meantime, let's distract ourselves with some sweet 
+                          satire about birth control:</h2>
+                          <div class="col-md-12 text-left">
+                                  <h4> <a href="http://reductress.com/post/study-finds-new-form-of-male-birth-control-works-best-if-you-also-continue-using-yours/" target="_blank">Study Finds New Form Of Male Birth Control Works Best If You Also Continue Using Yours</a></h3>
+                                  <h4> <a href="http://reductress.com/post/which-is-the-best-birth-control-pill-ask-your-doctor-or-me-your-horrible-friend-nancy/" target="_blank">Which Is The Best Birth Control Pill? Ask Your Doctor—Or Me, Your Horrible Friend Nancy</a></h3>
+                                  <h4> <a href="http://reductress.com/post/i-switched-birth-control-pills-and-now-im-a-cat-person/" target="_blank">I Switched Birth Control Pills and Now I’m a Cat Person</a></h3>
+                                  <h4> <a href="http://reductress.com/post/scientists-in-no-big-rush-to-release-new-form-of-male-birth-control/" target="_blank">Scientists In No Big Rush to Release New Form of Male Birth Control</a></h3>
+                          </div>
+ 
+
+                      
+
+                </div>
+                <div class="col-md-6 text-center">
+                    <div style="text-align:right;margin-right: 20px">
+                        <iframe src="https://giphy.com/embed/1zh6PZO70dyHRRkLv3" width="320" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/teachersseries-teacher-teachers-teach-1zh6PZO70dyHRRkLv3">via GIPHY</a></p>
+                    </div>
+                
+
+
+              </div>
+
+    <br>
+
+                                <br>
+                            <h2>Or check out <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank">Dissent Pins</a> to support reproductive rights and get yourself some cool swag at the same time!</h2>
+                            <marquee behavior="scroll" hspace="200px" width="900" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/ThePillPin_2_front_cropped_300x.jpg?v=1555000643" width="125" height="125" alt="The Pill Pin"></a>
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/CondomPin_2_front_cropped_300x.jpg?v=1542238228" width="125" height="125" alt="The Condom Pin"></a>
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/IUD_Pin_blue_cropped_300x.jpg?v=1555000598" width="125" height="125" alt="The IUD Pin"></a>
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/VasectomyPin_3_cropped_300x.jpg?v=1555000649" width="125" height="125" alt="The Vasectomy Pin"></a>
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/pill_tattoo_on_blue_1200x1200_300x.jpg?v=1542238146" width="125" height="125" alt="The Pill Tattoo"></a>
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/condom_tattoo_on_blue_1200x1200_300x.jpg?v=1542238146" width="125" height="125" alt="The Condom Tattoo"></a>
+                                <a href="https://dissentpins.com/collections/reproductive-justice"target="_blank"><img src="https://cdn.shopify.com/s/files/1/1746/4337/products/clamp_tattoo_on_blue_1200x1200_300x.jpg?v=1542238146" width="125" height="125" alt="The Vasectomy Tattoo"></a>
+                                </marquee>
+
+                      </div>
+                      
+                    </div>
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+    </body>
+
+</html>
