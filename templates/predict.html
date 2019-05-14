@@ -39,8 +39,9 @@
                     <li ><a href="/table"><span class="glyphicon glyphicon-list-alt"></span> User Reviews</a></li>
                     <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
                     <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
+                    <li><a href="/predictions"><span class="glyphicon glyphicon-eye-open"></span> Predictions</a></li>
                     <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
-                    <li><a href="/predictions"><span class="glyphicon glyphicon-user"></span> Predictions</a></li>
+                    
                 </ul>              
               </div>
               <!-- /.navbar-collapse -->
@@ -57,79 +58,120 @@
               </div>
 
               <br>
-              <div class="dropdown text-center">
-                    <h2>Age</h2>
+              <div class="panel panel-default">
+                    <div class="panel-body">
+              <h1 style="text-align:center">Please select your demographic information, and watch our trained AI try to predict your birth control method.</h1>
+              <br> <br>
+
+              <div class="row">
+                    <div class="col-md-6">
+                            <div class="dropdown text-center">
+              <!-- <div class="dropdown text-left" style="padding-left:10%"> -->
+                    <h2>How old are you?</h2>
                             <select id="selDataset1" >
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="40">40</option>
-                            <option value="Non-hormonal IUD">Non-hormonal IUD</option>
-                            <option value="Combination Pill">Combination Pill</option>
-                            <option value="Progestin Pill">Progestin Pill</option>
-                            <option value="Patch">Patch</option>
-                            <option value="Ring">Ring</option>
-                            <option value="Implant">Implant</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="33">33</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
                         </select>
                     </div>
                     <br>
                     <div class="dropdown text-center">
-                          <h2>Marital Status</h2>
-                                  <select id="selDataset2" >
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="Non-hormonal IUD">Non-hormonal IUD</option>
-                                  <option value="Combination Pill">Combination Pill</option>
-                                  <option value="Progestin Pill">Progestin Pill</option>
-                                  <option value="Patch">Patch</option>
-                                  <option value="Ring">Ring</option>
-                                  <option value="Implant">Implant</option>
+                          <h2>What is your current marital status?</h2>
+                          <select id="selDataset2" >
+                          <option value="1">Married to a person of opposite sex</option>
+                          <option value="2">Not married, living with partner of opposite sex</option>
+                          <option value="3">Widowed</option>
+                          <option value="4">Divorced or annulled</option>
+                          <option value="5">Seperated</option>
+                          <option value="6">Never been married</option>
+                          <option value="9">Don't know</option>
                               </select>
                           </div>
                           <br>
                           <div class="dropdown text-center">
-                                <h2>Race</h2>
+                                <h2>What race do you identify as?</h2>
                                         <select id="selDataset3" >
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="Non-hormonal IUD">Non-hormonal IUD</option>
-                                        <option value="Combination Pill">Combination Pill</option>
-                                        <option value="Progestin Pill">Progestin Pill</option>
-                                        <option value="Patch">Patch</option>
-                                        <option value="Ring">Ring</option>
-                                        <option value="Implant">Implant</option>
+                                            <option value="1">Native American</option>
+                                            <option value="2">Asian</option>
+                                            <option value="6">Hispanic</option>
+                                            <option value="4">Black or African American</option>
+                                            <option value="5">White</option>
+                                            <option value="3">Other</option>
                                     </select>
                                 </div>
                                 <br>
                           <br>
                           <div class="dropdown text-center">
-                                <h2>Highest Education</h2>
+                                <h2>What is your highest level of education?</h2>
                                         <select id="selDataset4" >
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="Hormonal IUD">Hormonal IUD</option>
-                                        <option value="Non-hormonal IUD">Non-hormonal IUD</option>
-                                        <option value="Combination Pill">Combination Pill</option>
-                                        <option value="Progestin Pill">Progestin Pill</option>
-                                        <option value="Patch">Patch</option>
-                                        <option value="Ring">Ring</option>
-                                        <option value="Implant">Implant</option>
+                                            <option value="5">9th Grade or Less</option>
+                                            <option value="6">10th Grade</option>
+                                            <option value="7">11th Grade</option>
+                                            <option value="8">12th Grade (No Diploma or GED)</option>
+                                            <option value="9">High School Graduate</option>
+                                            <option value="10">Some college but no degree</option>
+                                            <option value="11">Associate Degree</option>
+                                            <option value="12">Bachelor's Degree</option>
+                                            <option value="13">Master's Degree</option>
+                                            <option value="14">Professional Degree</option>
                                     </select>
                                 </div>
 
-                                <div id="result">
+                                <p align="center"><br/><br/>
+                                <button id="Submitbutton" class="button" value='Submit' onclick="makePredictions()">Submit
+                                        <!-- <img src="../static/css/pill_glyph.PNG" /> -->
+                                    </button>
+                                </p>
 
-                                    <img id = "result-img"/>
-                                    <span id="result-text">foo
+                            </div>
+
+
+
+                                <div class="col-md-6">
+                                        <div id="result" class="text-center">    
+                                <!-- <div id="result" class="text-center" style="padding-top: 20%"> -->
+
+                                    <img id = "result-img"/><br>
+                                    <span id="result-text">What will our AI guess?
                                     </span>
     
                                 </div>
+                            </div>
+ </div>
+                            
+
+                        </div>
+                        <br>
 
 
-                                      <button id="button" value='Submit' onclick="makePredictions()">Submit
-                                            <!-- <img src="../static/css/pill_glyph.PNG" /> -->
-                                        </button>
         
 
               

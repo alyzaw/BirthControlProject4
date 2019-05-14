@@ -1,4 +1,68 @@
 
+#Submitbutton {
+  /* padding-left:50px; */ 
+  /* margin: 30px 0; */
+  /* text-align: center; */
+  background-color:  #1E8783;
+  border-radius: 15px;
+  width: 25%;
+  height: 40%; 
+  font-family: 'Varela Round';
+  font-size: 30px;
+  color: #FFD87D;
+  }
+
+#result-img {
+  /* -webkit-animation: animationName 2s infinite;
+  -moz-animation: animationName 2s infinite;
+  -o-animation: animationName 2s infinite;
+   animation: animationName 2s infinite; */
+
+
+    /* opacity: 0;
+    animation: fade-in-right ease 0.4s forwards;
+    animation-delay: 0.8s; */
+
+    /* opacity:0;  
+    -webkit-animation:fadeIn ease-in 1;  
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    
+    -webkit-animation-fill-mode:forwards;  
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s; */
+    
+  }
+  
+
+  /* @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } } */
+ 
+ 
+/* #result-img {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+} */
+
+  #result-text {
+    font-size: 38px;  
+    font-weight: bold;
+
+    font-family: 'Varela Round';
+    color: #1E8783;
+    /* transform: scaleX(0);
+    transform-origin: left;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+    animation-delay: 0.4s; */
+  }
+  
+
 #load-image {
   position: relative;
   /* top: 50%;
@@ -150,20 +214,19 @@ text-shadow:
       height: 450px;
       padding: 20px;
       margin: 0;
-      background-image: url("../css/woman_iud.jpg");
-      background-position: bottom center;
-      background-size: 60%;
+      background-image: url("../css/robobc2.png");
+      background-size: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
       text-align: left;
       font-size: 28px;  
       font-family: 'Chivo';
-      color: #812443;
+      color: #01ABBA;
       text-shadow:
-      -3px -3px 0 #2FBCB3,
-      1px -1px 0 #2FBCB3,
-      -1px 1px 0 #2FBCB3,
-      1px 1px 0 #2FBCB3;
+      -3px -3px 0 #812443,
+      1px -1px 0 #812443,
+      -1px 1px 0 #812443,
+      1px 1px 0 #812443;
       }
 
 .hero h1 {
