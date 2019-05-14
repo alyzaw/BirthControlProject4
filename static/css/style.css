@@ -340,18 +340,82 @@ font-family: 'Varela Round';
 .sidemenu {
 background-color: #01ABBA;
 float: right;
-width: 30%;
+width: 20%;
 padding: 50px;
 font-size: 24px; 
 font-weight: bold;
 }
+.side_grid_2{
+float:left;
+width:15%;
+border-bottom: 1px dashed #bfbfbf;
+background-color: #efefef;
+
+}
      
-#footer {
-clear: both;
-text-align: right;
-margin: 20px 0;
-padding: 10px 5px;
-font-family: 'Chivo';
+footer {
+  clear: both;
+  text-align: center;
+  margin: 20px 20px;
+  padding-top: 50px;
+  background-color: #1E8783;
+  font-family: 'Chivo';
+  color: #CCC;
+  }
+
+  #footer ul{
+
+    text-decoration: none;
+    list-style: none;
+    float: right;
+    
+    }
+
+
+#side_by_side{margin-left: auto;
+  margin-right: auto;
+  width:960px;
+  height:2200px;
+  display: block;
+  margin-top: 100px;
+  float: left;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+
+}
+
+.small_body_copy_italic{
+  font-style: italic;
+  font-weight: normal;
+  font-family: georgia, serif;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+#side_grid ul{
+  list-style: none;
+  text-decoration: underline;
+  border-bottom: 1px dashed #000;
+}
+
+.grid_1,
+.grid_2,
+.grid_3 {
+display: inline-block;
+position: relative;
+width:25%;
+margin-left: 10px;
+margin-right: 10px;
+border: 1px dashed #bfbfbf;
+border-bottom: 1px dashed #bfbfbf;
+padding:0;
+background-color: #efefef;
+}
+
+.closebtn{
+  font-size: 20px;
+  float:right;
 }
 
 .dropdown {
@@ -693,62 +757,7 @@ font-weight: bold;
 
 
 @media (max-width: 500px) {
-  /* .d3-tip {
-  padding: 6px;
-  font-size: 12px;
-  line-height: 1;
-  line-height: 1.5em;
-  color: #fff;
-  text-align: center;
-  text-transform: capitalize;
-  background: rgba(190, 49, 49, 0.8);
-  border-radius: 4px;
-  font-family: 'Chivo';
-} */
-/* 
-.hero-home {
-position: relative;
-height: 320px;
-padding: 10px;
-background-size: 200%;
-background-position: top center;
-font-size: 18px;  
-}
-
-.hero-page2 {
-position: relative;
-height: 320px;
-padding: 10px;
-background-size: 160%;
-font-size: 18px;  
-background-position: top center;
-text-align: right;
-}
-
-.hero-page3 {
-  position: relative;
-  height: 320px;
-  padding: 10px;
-  margin: 0;
-  background-position: top;
-  background-size: 175%;
-  text-align: left;
-  font-size: 18px;  
-  }
-
-  .hero-page4 {
-    position: relative;
-    height: 320px;
-    padding: 10px;
-    background-size: 165%;
-    background-position: top center;
-    font-size: 18px;  
-    } */
-
-.hero h1 {
-  font-size: 32px;  
-  width: 100%;
-  /* padding-top: 100px; */
+  
 
 }
 
@@ -876,5 +885,3 @@ font-weight: bold;
   font-size: 14px;
 }
       
-
-}
