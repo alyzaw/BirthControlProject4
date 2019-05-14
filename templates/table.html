@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <title>Deborah Test</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Birth Control Review</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="">
+  <!-- Import JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Import DataTables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+  <!-- Import Search Panes -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
   
-    
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
 
 </head>
 
@@ -35,8 +31,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+
               </button>               
               </div>
                       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,31 +62,33 @@
             <br>
             <br>      
 
-            <div class="container">
-                <div class="row" style="text-align: center">
-            <img id="load-image" src="../static/css/iud_loading.png" alt="loadIUD" width="60" height="60"><br><br>
-            <p id="load-text">Loading Table...</p>
-          </div> </div>
 
-        <div class="container">
-        <div class="col-md-12">
-          <div id="table-area" class="">
-            <table id="myTable" class="table table-striped">
-              <thead>
-                <tr>
-                  
-                  <th class="table-head">Method</th>
-                  <th class="table-head">Brand</th>
-                  <th class="table-head">User Rating</th>
-                  <th class="table-head">Vader Rating</th>
-                  <th class="table-head">User Review</th>
-                  <th class="table-head">Use</th>
-                  <th class="table-head">Date Published</th>
-                  <th class="table-head">Source</th>
-                  
-                </tr>
-              </thead>
-              <tbody></tbody>
+
+
+            <h1>Search Through the Filter Table</h1>
+
+            <!--Define class for Search Panel options -->
+            
+            
+            <!-- Set up table -->
+            
+            <div class ="searchPanes" style="background:grey">Search Panes</div>
+
+            <table id="mytable" class="display table-striped">
+                <thead>
+                    <tr>
+                            <th class="table-head">Method</th>
+                            <th class="table-head">Brand</th>
+                            <th class="table-head">User Rating</th>
+                            <th class="table-head">User Review</th>
+                            <th class="table-head">Vader Scale</th>
+                            <th class="table-head">Date Published</th>
+                            <th class="table-head">Use</th>
+                            <th class="table-head">Source</th>
+                    </tr>
+            
+                    </thead>
+              <tbody id="tbody"></tbody>
             </table>
           </div>
         </div>
@@ -102,10 +99,8 @@
     </footer> -->
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-  crossorigin="anonymous"></script>
+  
+  <!-- <script src="static/js/data.js"></script> -->
   <script src="static/js/table.js"></script>
 </body>
 
