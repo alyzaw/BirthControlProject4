@@ -61,9 +61,15 @@ load_outcomes()
 
 @app.route("/mlm/<input_tuple>")
 def find_output(input_tuple):
-    output = model.loc[model['Input'] == input_tuple]
-    returned_output = output.iloc[0,2]
-    output_str = str(returned_output)
+    
+    try:   
+        output = model.loc[model['Input'] == input_tuple]
+        returned_output = output.iloc[0,2]
+        output_str = str(returned_output)
+    except:
+        return jsonify({"data": '99'})
+
+    
     return jsonify({"data": output_str})
 
 @app.route("/predictions")
@@ -229,10 +235,97 @@ def scrape_news():
 
     return render_template("newsscrape.html", recentNews=news_data)
 
+@app.route("/bc_table")
+def user_review_():
+    conn = engine.connect()
+    #create list of columns
+    bc_table = pd.read_sql("SELECT Method, Birth_Control, Star_Rating, Vader_Scale, Review, `Use`, `Publish_Date`, `Source` FROM birth_control_all", conn)
+    bc_table_json = bc_table.to_dict(orient="records")
+    return jsonify(bc_table_json)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
 
+<<<<<<< HEAD
+=======
+
+# import os
+
+# import pandas as pd
+# import numpy as np
+
+# import sqlalchemy
+# from sqlalchemy.ext.automap import automap_base
+# from sqlalchemy.orm import Session
+# from sqlalchemy import create_engine, MetaData
+# import decimal
+# import flask
+# from flask import Flask, jsonify, render_template, request, redirect
+# from flask_sqlalchemy import SQLAlchemy
+# from googlesearch import search_news
+
+# import pymysql
+# pymysql.install_as_MySQLdb()
+
+# is_prod = os.environ.get('IS_HEROKU', None)	
+
+# if is_prod:	
+#     endpoint = os.environ.get('endpoint')	
+#     instance = os.environ.get('instance')	
+#     password = os.environ.get('password')	
+#     port = os.environ.get('port')	
+#     username = os.environ.get('username')	
+# else:	
+#     from config import endpoint, username, password, instance, port
+
+# dburl = f'mysql://{username}:{password}@{endpoint}:{port}/{instance}'
+
+
+# app = Flask(__name__)
+
+
+# app.config["SQLALCHEMY_DATABASE_URI"] = dburl
+# db = SQLAlchemy(app)
+# engine = create_engine(f"mysql://{username}:{password}@{endpoint}:{port}/{instance}")
+# conn = engine.connect()
+# # reflect an existing database into a new model
+# # Base = automap_base()
+# # reflect the tables
+# # Base.prepare(db.engine, reflect=True)
+
+# metadata = MetaData(engine, reflect=True)
+
+# # Save references to each table
+# birth_control = metadata.tables["birth_control_all"]
+# side_effects = metadata.tables["side_effects_db"]
+# #print(birth_control)
+
+# @app.route("/")
+# def home():
+#     """Render Home Page."""
+#     return render_template("index.html")
+
+
+# @app.route("/table")
+# def table():
+#     """Render Home Page."""
+#     return render_template("table.html")
+
+
+# @app.route("/side_effects")
+# def effectreview():
+#     """Render Side Effect Page."""
+#     return render_template("sideeffect_viz.html")
+
+# @app.route("/predictions")
+# def predictions():
+#     """Render Side Effect Page."""
+#     return render_template("predict.html")
+
+
+>>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
 
 
 

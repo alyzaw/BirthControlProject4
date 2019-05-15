@@ -1,67 +1,55 @@
-
 #Submitbutton {
-  /* padding-left:50px; */ 
+  /* padding-left:50px; */
   /* margin: 30px 0; */
   /* text-align: center; */
-  background-color:  #1E8783;
+  background-color: #1e8783;
   border-radius: 15px;
   width: 25%;
-  height: 40%; 
-  font-family: 'Varela Round';
+  height: 40%;
+  font-family: "Varela Round";
   font-size: 30px;
-  color: #FFD87D;
-  }
+  color: #ffd87d;
+}
 
 #result-img {
-  /* -webkit-animation: animationName 2s infinite;
-  -moz-animation: animationName 2s infinite;
-  -o-animation: animationName 2s infinite;
-   animation: animationName 2s infinite; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  /* -webkit-animation: animationName 4s infinite;
+  -moz-animation: animationName 4s infinite;
+  -o-animation: animationName 4s infinite;
+  animation: animationName 4s infinite; */
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-animation: zoomin 3s ease-in infinite;
+  animation: zoomin 3s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+} /*End of Zoom in Keyframes */
 
 
-    /* opacity: 0;
-    animation: fade-in-right ease 0.4s forwards;
-    animation-delay: 0.8s; */
+#result-text {
+  font-size: 38px;
+  font-weight: bold;
 
-    /* opacity:0;  
-    -webkit-animation:fadeIn ease-in 1;  
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-    
-    -webkit-animation-fill-mode:forwards;  
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-    
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s; */
-    
-  }
-  
+  font-family: "Varela Round";
+  color: #1e8783;
 
-  /* @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } } */
- 
- 
-/* #result-img {
--webkit-animation-delay: 0.7s;
--moz-animation-delay: 0.7s;
-animation-delay: 0.7s;
-} */
-
-  #result-text {
-    font-size: 38px;  
-    font-weight: bold;
-
-    font-family: 'Varela Round';
-    color: #1E8783;
-    /* transform: scaleX(0);
-    transform-origin: left;
-    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
-    animation-delay: 0.4s; */
-  }
-  
+}
 
 #load-image {
   position: relative;
@@ -70,49 +58,90 @@ animation-delay: 0.7s;
   width: 60px;
   height: 60px;
   /* margin:-60px 0 0 -60px; */
-  -webkit-animation:spin 4s linear infinite;
+  -webkit-animation: spin 4s linear infinite;
   /* -webkit-transition: -webkit-transform 15s ease-in; */
-  -moz-animation:spin 4s linear infinite;
-  animation:spin .9s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 0.9s linear infinite;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }  
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 #load-text {
-font-size: 38px;  
-font-weight: bold;
-color: #85C441;
-display: inline-block;
-font-family: 'Varela Round';
--webkit-animation: animationName 2s infinite;
--moz-animation: animationName 2s infinite;
--o-animation: animationName 2s infinite;
- animation: animationName 2s infinite;
+  font-size: 38px;
+  font-weight: bold;
+  color: #85c441;
+  display: inline-block;
+  font-family: "Varela Round";
+  -webkit-animation: animationName 2s infinite;
+  -moz-animation: animationName 2s infinite;
+  -o-animation: animationName 2s infinite;
+  animation: animationName 2s infinite;
 }
 
 @keyframes animationName {
-  0%   { opacity:0; }
-  50%  { opacity:1; }
-  100% { opacity:0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-@-o-keyframes animationName{
-  0%   { opacity:0; }
-  50%  { opacity:1; }
-  100% { opacity:0; }
+@-o-keyframes animationName {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-@-moz-keyframes animationName{
-  0%   { opacity:0; }
-  50%  { opacity:1; }
-  100% { opacity:0; }
+@-moz-keyframes animationName {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-@-webkit-keyframes animationName{
-  0%   { opacity:0; }
-  50%  { opacity:1; }
-  100% { opacity:0; }
-}   
+@-webkit-keyframes animationName {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
+.searchPanes {
+  background: rgb(135, 193, 189);
+  color: #812443;
+  font-weight: bold;
+}
 
 .d3-tip {
   padding: 6px;
@@ -124,47 +153,41 @@ font-family: 'Varela Round';
   text-transform: capitalize;
   background: rgba(190, 49, 49, 0.8);
   border-radius: 4px;
-  font-family: 'Chivo';
+  font-family: "Chivo";
 }
 
 .hero-home {
-position: relative;
-height: 450px;
-padding: 20px;
-margin: 0;
-background-image: url("../css/bc-choices.png");
-background-size: 100%;
-background-repeat: no-repeat;
-background-attachment: fixed;
-text-align: left;
-font-size: 28px;  
-font-family: 'Chivo';
-color: #01ABBA;
-text-shadow:
--3px -3px 0 #812443,
-1px -1px 0 #812443,
--1px 1px 0 #812443,
-1px 1px 0 #812443;
+  position: relative;
+  height: 450px;
+  padding: 20px;
+  margin: 0;
+  background-image: url("../css/bc-choices.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: left;
+  font-size: 28px;
+  font-family: "Chivo";
+  color: #01abba;
+  text-shadow: -3px -3px 0 #812443, 1px -1px 0 #812443, -1px 1px 0 #812443,
+    1px 1px 0 #812443;
 }
 
 .hero-page2 {
-position: relative;
-height: 450px;
-padding: 20px;
-margin: 0;
-background-image: url("../css/contraception-thoughts.jpg");
-background-size: 100%;
-background-repeat: no-repeat;
-background-attachment: fixed;
-text-align: left;
-font-size: 28px;  
-font-family: 'Chivo';
-color: #85C441;
-text-shadow:
--3px -3px 0 #000,
-2px -2px 0 #000,
--2px 2px 0 #000,
-2px 2px 0 #000;
+  position: relative;
+  height: 450px;
+  padding: 20px;
+  margin: 0;
+  background-image: url("../css/contraception-thoughts.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: left;
+  font-size: 28px;
+  font-family: "Chivo";
+  color: #85c441;
+  text-shadow: -3px -3px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 .hero-page3 {
@@ -178,94 +201,84 @@ text-shadow:
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: left;
-  font-size: 28px;  
-  font-family: 'Chivo';
-  color: #FFD87D;
-  text-shadow:
-  -3px -3px 0 #812443,
-  1px -1px 0 #812443,
-  -1px 1px 0 #812443,
-  1px 1px 0 #812443;
-  }
+  font-size: 28px;
+  font-family: "Chivo";
+  color: #ffd87d;
+  text-shadow: -3px -3px 0 #812443, 1px -1px 0 #812443, -1px 1px 0 #812443,
+    1px 1px 0 #812443;
+}
 
-  .hero-page4 {
-    position: relative;
-    height: 450px;
-    padding: 20px;
-    margin: 0;
-    background-image: url("../css/dude-pill.jpg");
-    background-position: bottom center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    text-align: left;
-    font-size: 28px;  
-    font-family: 'Chivo';
-    color: #812443;
-    text-shadow:
-    -3px -3px 0 #85C441,
-    1px -1px 0 #85C441,
-    -1px 1px 0 #85C441,
-    1px 1px 0 #85C441;
-    }
+.hero-page4 {
+  position: relative;
+  height: 450px;
+  padding: 20px;
+  margin: 0;
+  background-image: url("../css/dude-pill.jpg");
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: left;
+  font-size: 28px;
+  font-family: "Chivo";
+  color: #812443;
+  text-shadow: -3px -3px 0 #85c441, 1px -1px 0 #85c441, -1px 1px 0 #85c441,
+    1px 1px 0 #85c441;
+}
 
-    .hero-page5 {
-      position: relative;
-      height: 450px;
-      padding: 20px;
-      margin: 0;
-      background-image: url("../css/robobc2.png");
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      text-align: left;
-      font-size: 28px;  
-      font-family: 'Chivo';
-      color: #01ABBA;
-      text-shadow:
-      -3px -3px 0 #812443,
-      1px -1px 0 #812443,
-      -1px 1px 0 #812443,
-      1px 1px 0 #812443;
-      }
+.hero-page5 {
+  position: relative;
+  height: 450px;
+  padding: 20px;
+  margin: 0;
+  background-image: url("../css/robobc2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: left;
+  font-size: 28px;
+  font-family: "Chivo";
+  color: #01abba;
+  text-shadow: -3px -3px 0 #812443, 1px -1px 0 #812443, -1px 1px 0 #812443,
+    1px 1px 0 #812443;
+}
 
 .hero h1 {
-  font-size: 58px;  
+  font-size: 58px;
   font-weight: bold;
   width: 50%;
   display: inline-block;
-  font-family: 'Chivo';
+  font-family: "Chivo";
 }
 
 .hero p {
-  font-size: 38px;  
+  font-size: 38px;
   font-weight: bold;
   width: 50%;
   display: inline-block;
-  font-family: 'Chivo';
+  font-family: "Chivo";
 }
 
 .panel {
-  font-size: 18px;  
+  font-size: 18px;
   width: 90%;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
 }
 
 .panel li {
-  font-size: 18px;  
+  font-size: 18px;
   width: 80%;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
 }
 
-#wordcloudSpot{
+#wordcloudSpot {
   left: 20%;
   position: absolute;
   /* width: 860px;
   height: 560px !important; */
-  
 }
 
 svg#barsvg {
@@ -278,18 +291,14 @@ transform: translate(0px, 500px);
 } */
 
 .navbar {
-  background-color: #01ABBA;
+  background-color: #01abba;
   color: black;
-  font-size: 20px;  
+  font-size: 20px;
   font-weight: bold;
-  font-family: 'Varela Round';
-  }
-  
-  .navbar-nav :hover {
-    color: #1E8783;
-    background-color: #85C441;
-  }
+  font-family: "Varela Round";
+}
 
+<<<<<<< HEAD
   #button {
     padding: 15px;
     position: relative;
@@ -301,42 +310,55 @@ transform: translate(0px, 500px);
     height: 30%;
     font-family: 'Varela Round';
     }
+=======
+.navbar-nav :hover {
+  color: #1e8783;
+  background-color: #85c441;
+}
+
+#button {
+  padding: 15px 0;
+  margin: 15px 0;
+  background-color: #1e8783;
+  border-radius: 15px;
+  width: 40%;
+  height: 30%;
+  font-family: "Varela Round";
+}
+>>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
 
 img {
-max-width: 100%;
+  max-width: 100%;
 }
-     
+
 .container {
-background-color: white;
+  background-color: white;
 }
-     
-    
+
 .welcomeHeader {
-font-size: 2em;
-padding: 10px;
-font-family: 'Chivo';
+  font-size: 2em;
+  padding: 10px;
+  font-family: "Chivo";
 }
-     
+
 .content {
-float: left;
-width: 60%;
-font-family: 'Varela Round';
+  float: left;
+  width: 60%;
+  font-family: "Varela Round";
 }
 
 .header {
-  font-size: 2em; 
-  font-family: 'Chivo';
-  color: #F05179;
-  text-shadow:
-    -3px -3px 0 #1E8783,
-    1px -1px 0 #1E8783,
-    -1px 1px 0 #1E8783,
-    1px 1px 0 #1E8783;
+  font-size: 2em;
+  font-family: "Chivo";
+  color: #f05179;
+  text-shadow: -3px -3px 0 #1e8783, 1px -1px 0 #1e8783, -1px 1px 0 #1e8783,
+    1px 1px 0 #1e8783;
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+<<<<<<< HEAD
   }
 
 
@@ -491,156 +513,170 @@ background-color: none;
 .closebtn{
   font-size: 20px;
   float:right;
+=======
+}
+
+.sidemenu {
+  background-color: #01abba;
+  float: right;
+  width: 30%;
+  padding: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#footer {
+  clear: both;
+  text-align: right;
+  margin: 20px 0;
+  padding: 10px 5px;
+  font-family: "Chivo";
+>>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
 }
 
 .dropdown {
-
-  font-size: 28px;  
-  font-family: 'Chivo';
-  color: #1E8783;
+  font-size: 28px;
+  font-family: "Chivo";
+  color: #1e8783;
 }
 
 #intro h2 {
-  font-size: 58px;  
+  font-size: 58px;
   font-weight: bold;
   display: inline-block;
-  font-family: 'Varela Round';
-  color: #1E8783;
+  font-family: "Varela Round";
+  color: #1e8783;
 }
 
 #intro h3 {
-  font-size: 24px;  
+  font-size: 24px;
   font-weight: bold;
   display: inline-block;
-  font-family: 'Varela Round';
-  color: #1E8783;
+  font-family: "Varela Round";
+  color: #1e8783;
   width: 55%;
 }
 
 #intro3 h2 {
-  font-size: 58px;  
+  font-size: 58px;
   font-weight: bold;
   display: inline-block;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   color: #812443;
 }
-     
+
 #intro h1 {
-  font-family: 'Bungee Shade', cursive;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	font-weight: normal;
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
-	font-size: 100px;
-	background: linear-gradient(
-		-45deg, 
-		#F05179 25%, 
-		#1E8783 25%, 
-		#1E8783 50%, 
-		#F05179 50%, 
-		#F05179 75%, 
-		#1E8783 75%, 
-    #1E8783);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-size: 20px 20px;
-	background-position: 0 0;
-	animation: stripes 1s linear infinite;
-}	
+  font-family: "Bungee Shade", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  background: linear-gradient(
+    -45deg,
+    #f05179 25%,
+    #1e8783 25%,
+    #1e8783 50%,
+    #f05179 50%,
+    #f05179 75%,
+    #1e8783 75%,
+    #1e8783
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 20px 20px;
+  background-position: 0 0;
+  animation: stripes 1s linear infinite;
+}
 
 #intro2 h1 {
-  font-family: 'Bungee Shade', cursive;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	font-weight: normal;
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
-	font-size: 100px;
-	background: linear-gradient(
-		-45deg, 
-		#FFD87D 25%, 
-		#2FBCB3 25%, 
-		#2FBCB3 50%, 
-		#FFD87D 50%, 
-		#FFD87D 75%, 
-		#2FBCB3 75%, 
-    #2FBCB3);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-size: 20px 20px;
-	background-position: 0 0;
-	animation: stripes 1s linear infinite;
-}	
+  font-family: "Bungee Shade", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  background: linear-gradient(
+    -45deg,
+    #ffd87d 25%,
+    #2fbcb3 25%,
+    #2fbcb3 50%,
+    #ffd87d 50%,
+    #ffd87d 75%,
+    #2fbcb3 75%,
+    #2fbcb3
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 20px 20px;
+  background-position: 0 0;
+  animation: stripes 1s linear infinite;
+}
 
 #intro3 h1 {
-  font-family: 'Bungee Shade', cursive;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	font-weight: normal;
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
-	font-size: 100px;
-	background: linear-gradient(
-		-45deg, 
-		#FFD87D 25%, 
-		#85C441 25%, 
-		#85C441 50%, 
-		#FFD87D 50%, 
-		#FFD87D 75%, 
-		#85C441 75%, 
-    #85C441);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-size: 20px 20px;
-	background-position: 0 0;
-	animation: stripes 1s linear infinite;
-}	
+  font-family: "Bungee Shade", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  background: linear-gradient(
+    -45deg,
+    #ffd87d 25%,
+    #85c441 25%,
+    #85c441 50%,
+    #ffd87d 50%,
+    #ffd87d 75%,
+    #85c441 75%,
+    #85c441
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 20px 20px;
+  background-position: 0 0;
+  animation: stripes 1s linear infinite;
+}
 
 @keyframes stripes {
-	100% { 
-		background-position: 20px 0, 20px 0, 20px 0;
-	}
+  100% {
+    background-position: 20px 0, 20px 0, 20px 0;
+  }
 }
 
 .site-nav h3 {
   font-weight: bold;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
 }
 
 .site-nav p {
   font-size: 18px;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
 }
 
 .site-nav button {
   padding: 15px 0;
   margin: 15px 0;
-  background-color:  #1E8783;
+  background-color: #1e8783;
   border-radius: 15px;
   width: 80%;
   height: 80%;
-  font-family: 'Varela Round';
-  }
-
-
-
-
-
-
-
+  font-family: "Varela Round";
+}
 
 @media (max-width: 1200px) {
   /* .d3-tip {
@@ -656,6 +692,192 @@ background-color: none;
   font-family: 'Chivo';
 } */
 
+  .hero-home {
+    position: relative;
+    height: 320px;
+    padding: 10px;
+    background-size: 200%;
+    background-position: top center;
+    font-size: 18px;
+  }
+
+  .hero-page2 {
+    position: relative;
+    height: 320px;
+    padding: 10px;
+    background-size: 160%;
+    font-size: 18px;
+    background-position: top center;
+    text-align: right;
+  }
+
+  .hero-page3 {
+    position: relative;
+    height: 320px;
+    padding: 10px;
+    margin: 0;
+    background-position: top;
+    background-size: 175%;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .hero-page4 {
+    position: relative;
+    height: 320px;
+    padding: 10px;
+    background-size: 165%;
+    background-position: top center;
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    width: 80%;
+    /* padding-top: 100px; */
+  }
+
+  .hero p {
+    font-size: 28px;
+    font-weight: bold;
+    width: 80%;
+  }
+
+  .panel {
+    font-size: 18px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  .panel li {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  #wordcloudSpot {
+    transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    position: relative;
+    left: -95px;
+    /* height: 10px; */
+    /* left: 0%;
+  padding: 0px; */
+    /* margin-left: 0%; */
+    /* size: 200px; */
+    /* position: relative; */
+    /* width: 60px; */
+  }
+
+  #barsvg {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    position: relative;
+    left: -145px;
+  }
+
+  #myChart {
+    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+    position: relative;
+    left: -50px;
+    /* display: inline-block; 
+  justify-content: left;
+  left: -300px; */
+  }
+
+  #button {
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 50%;
+    height: 30%;
+  }
+
+  .welcomeHeader {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .content {
+    float: left;
+    width: 80%;
+  }
+
+  .header {
+    font-size: 2em;
+    /* font-family: 'Chivo';
+  color: #F05179;
+  text-shadow:
+    -3px -3px 0 #1E8783,
+    1px -1px 0 #1E8783,
+    -1px 1px 0 #1E8783,
+    1px 1px 0 #1E8783; */
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .sidemenu {
+    background-color: #01abba;
+    float: right;
+    width: 30%;
+    padding: 50px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  #intro h3 {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    font-family: "Varela Round";
+    color: #1e8783;
+    width: 95%;
+  }
+
+  #intro3 h2 {
+    font-size: 38px;
+  }
+
+  #intro h1 {
+    font-size: 80px;
+  }
+
+  #intro2 h1 {
+    font-size: 80px;
+  }
+
+  .site-nav h3 {
+    font-size: 24px;
+  }
+
+  .site-nav p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+<<<<<<< HEAD
+  
+
+}
+=======
+  /* .d3-tip {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(190, 49, 49, 0.8);
+  border-radius: 4px;
+  font-family: 'Chivo';
+} */
+  /* 
 .hero-home {
 position: relative;
 height: 320px;
@@ -693,156 +915,22 @@ text-align: right;
     background-size: 165%;
     background-position: top center;
     font-size: 18px;  
-    }
+    } */
 
-.hero h1 {
-  font-size: 38px;  
-  width: 80%;
-  /* padding-top: 100px; */
-
-}
-
-.hero p {
-  font-size: 28px;  
-  font-weight: bold;
-  width: 80%;
-}
-
-.panel {
-  font-size: 18px;  
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-}
-
-.panel li {
-  font-size: 18px;  
-  width: 80%;
-}
-
-#wordcloudSpot{
-  transform:scale(.65);
-  -webkit-transform:scale(.65);
-  position: relative; 
-  left: -95px; 
-  /* height: 10px; */
-  /* left: 0%;
-  padding: 0px; */
-  /* margin-left: 0%; */
-  /* size: 200px; */
-  /* position: relative; */
-/* width: 60px; */
-}
-
-
-#barsvg {
-  transform:scale(.70);
-  -webkit-transform:scale(.70);
-  position: relative; 
-  left: -145px;  
-}
-
-#myChart{
-  transform:scale(.85);
-  -webkit-transform:scale(.85);
-  position: relative; 
-  left: -50px; 
-  /* display: inline-block; 
-  justify-content: left;
-  left: -300px; */
-}
-
-
-#button {
-  padding: 10px 0;
-  margin: 10px 0;
-  width: 50%;
-  height: 30%;
-}
-    
-.welcomeHeader {
-font-size: 2em;
-padding: 10px;
-}
-     
-.content {
-float: left;
-width: 80%;
-}
-
-.header {
-  font-size: 2em; 
-  /* font-family: 'Chivo';
-  color: #F05179;
-  text-shadow:
-    -3px -3px 0 #1E8783,
-    1px -1px 0 #1E8783,
-    -1px 1px 0 #1E8783,
-    1px 1px 0 #1E8783; */
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  .hero h1 {
+    font-size: 32px;
+    width: 100%;
+    /* padding-top: 100px; */
   }
-     
-.sidemenu {
-background-color: #01ABBA;
-float: right;
-width: 30%;
-padding: 50px;
-font-size: 24px; 
-font-weight: bold;
-}
+>>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
 
+  .hero p {
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+  }
 
-#intro h3 {
-  font-size: 18px;  
-  font-weight: bold;
-  display: inline-block;
-  font-family: 'Varela Round';
-  color: #1E8783;
-  width: 95%;
-}
-
-#intro3 h2 {
-  font-size: 38px;  
-}
-
-#intro h1 {
-	font-size: 80px;
-}	
-
-#intro2 h1 {
-	font-size: 80px;
-}	
-
-.site-nav h3 {
-  font-size: 24px;
-}
-
-.site-nav p {
-  font-size: 14px;
-}
-      
-}
-
-
-
-
-@media (max-width: 500px) {
-  
-
-}
-
-.hero p {
-  font-size: 24px;  
-  font-weight: bold;
-  width: 100%;
-}
-
-/* .panel {
+  /* .panel {
   font-size: 18px;  
   width: 95%;
   margin-left: auto;
@@ -850,44 +938,43 @@ font-weight: bold;
   padding: 20px;
 } */
 
-.panel li {
-  font-size: 14px;  
-  width: 90%;
-}
+  .panel li {
+    font-size: 14px;
+    width: 90%;
+  }
 
-#wordcloudSpot{
-  transform:scale(.65);
-  -webkit-transform:scale(.65);
-  position: relative; 
-  left: -130px; 
-  /* height: 10px; */
-  /* left: 0%;
+  #wordcloudSpot {
+    transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    position: relative;
+    left: -130px;
+    /* height: 10px; */
+    /* left: 0%;
   padding: 0px; */
-  /* margin-left: 0%; */
-  /* size: 200px; */
-  /* position: relative; */
-/* width: 60px; */
-}
+    /* margin-left: 0%; */
+    /* size: 200px; */
+    /* position: relative; */
+    /* width: 60px; */
+  }
 
+  #barsvg {
+    transform: scale(0.55);
+    -webkit-transform: scale(0.55);
+    position: relative;
+    left: -155px;
+  }
 
-#barsvg {
-  transform:scale(.55);
-  -webkit-transform:scale(.55);
-  position: relative; 
-  left: -155px;  
-}
-
-#myChart{
-  transform:scale(.65);
-  -webkit-transform:scale(.65);
-  position: relative; 
-  left: -70px; 
-  /* display: inline-block; 
+  #myChart {
+    transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    position: relative;
+    left: -70px;
+    /* display: inline-block; 
   justify-content: left;
   left: -300px; */
-}
+  }
 
-/* 
+  /* 
 #button {
   padding: 10px 0;
   margin: 10px 0;
@@ -899,29 +986,29 @@ font-weight: bold;
 font-size: 2em;
 padding: 10px;
 } */
-     
-/* .content {
+
+  /* .content {
 float: left;
 width: 80%;
 } */
 
-.header {
-  font-size: 2em; 
-  /* font-family: 'Chivo';
+  .header {
+    font-size: 2em;
+    /* font-family: 'Chivo';
   color: #F05179;
   text-shadow:
     -3px -3px 0 #1E8783,
     1px -1px 0 #1E8783,
     -1px 1px 0 #1E8783,
     1px 1px 0 #1E8783; */
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
-     
-/* .sidemenu {
+
+  /* .sidemenu {
 background-color: #01ABBA;
 float: right;
 width: 30%;
@@ -930,8 +1017,7 @@ font-size: 24px;
 font-weight: bold;
 } */
 
-
-/* #intro h3 {
+  /* #intro h3 {
   font-size: 18px;  
   font-weight: bold;
   display: inline-block;
@@ -940,23 +1026,27 @@ font-weight: bold;
   width: 95%;
 } */
 
-#intro3 h2 {
-  font-size: 38px;  
+  #intro3 h2 {
+    font-size: 38px;
+  }
+
+  #intro h1 {
+    font-size: 65px;
+  }
+
+  #intro2 h1 {
+    font-size: 65px;
+  }
+
+  .site-nav h3 {
+    font-size: 14px;
+  }
+
+  .site-nav p {
+    font-size: 14px;
+  }
 }
-
-#intro h1 {
-	font-size: 65px;
-}	
-
-#intro2 h1 {
-	font-size: 65px;
-}	
-
-.site-nav h3 {
-  font-size: 14px;
-}
-
-.site-nav p {
-  font-size: 14px;
-}
+<<<<<<< HEAD
       
+=======
+>>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
