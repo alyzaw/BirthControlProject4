@@ -104,244 +104,280 @@
 
             <hr>
 
-            
-            <div class="col-sm-12">
-
-                <div class="bs-calltoaction bs-calltoaction-primary">
-                    <div class="row">
-                        <div class="col-md-9 cta-contents">
-                            <h1 class="cta-title">Side by Side Comparison</h1>
-                            <div class="cta-desc">
-                                <h3>Click on any method.</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-default">Go for It!</a>
-                        </div>
-                     </div>
-                </div>
-
-
-            <div class="container">
-                            
+            <div class="container-tiles" >
             <div class="row">
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Combination Pill' onclick="openTab('Combination Pill');">
-                            <img src="../static/css/combination_patch_glyph2.png" />
-                        </button>
+                <ul>
+                        <li> <div class="title">Combination Pill
+                            <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
                     </div>
+                        Lifetsyle
+                        94% Effective
+                        Effective Immediately</li>
 
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Progestin Pill' onclick="openTab('Progestin Pill');">
-                            <img src="../static/css/progestin_patch_glyph2.png" />
-                        </button>
+                        <li> <div class="title">Progestin Pill
+                            <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
                     </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Hormonal IUD' onclick="openTab('Hormonal IUD');">
-                            <img src="../static/css/hormonal_iud_glyph_.png" />
-                        </button>
-                    </div>
-
-
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Non Hormonal IUD' onclick="openTab('Non Hormonal IUD');">
-                            <img src="../static/css/non_hormonal_iud_glyph.PNG" />
-                        </button>
-                    </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Ring' onclick="openTab('Ring');">
-                                <img src="../static/css/ring_glyph.PNG" />
-                        </button>
-                    </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Shot' onclick="openTab('Shot');">
-                            <img src="../static/css/shot_glyph.PNG" />
-                        </button>
-                    </div>
-
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Patch' onclick="openTab('Patch');">
-                            <img src="../static/css/patch_glyph.PNG" />
-                        </button>
-                    </div>
-                    
-                    <div class="col-xs-4 col-sm-4 col-md-3">
-                        <button id="button" value='Implant' onclick="openTab('Implant');">
-                                <img src="../static/css/implant_glyph.PNG" />
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-        <div id="side_by_side_view">
-       <div class="side_grid_2 " style="height : 750px;">
-                <div class="upper_left_space" style="height: 35px;">
-                    <ul id="side_grid">
-                    <li class="Description" style="height: 250px;"></li>
-                        <span class="small_body_copy_italic"> Description:</span>
-                        <li  class="Medical_procedure" style="height: 40px;"></li>
-                         <span class="small_body_copy_italic"> Medical Procedure:</span>
-
-                        <li class="Prescription_needed" style="height: 25px;"></li>
-                        <span class="small_body_copy_italic"> Prescription required?:</span>
-
-                        <li class="Action_Ready" style="height: 20px;"></li>
-                        <span class="small_body_copy_italic"> Ready for Action:</span>
-
-                        <li  class="How much" style="height: 20px;"></li>
-                        <span class="small_body_copy_italic"> Cost:</span>
-
-                        <li  class="Duration" style="height: 20px;"></li>
-                         <span class="small_body_copy_italic"> Shelf Life:</span>
-
-                        <li class="Safe_for_new_moms" style="height: 20px;"></li>
-                        <span class="small_body_copy_italic"> New Mom Certified?:</span>
-
-                        <li class="Fool Proof" style="height: 20px;"></li>
-                        <span class="small_body_copy_italic"> Fool Proof:</span>
-
-                        <li class="Effectiveness" style="height: 20px;"></li>
-                        <span class="small_body_copy_italic"> Effectiveness:</span>
-
-                        <li  class="STI_Prevention" style="height: 23px;"></li>
-                        <span class="small_body_copy_italic"> STI Prevention:</span>
-
-                         <li  class="Helps_with_period" style="height: 23px;"></li>
-                        <span class="small_body_copy_italic"> Aids Menstrual Cycle:</span>
-                </ul>
-                </div>
-            </div>
-
-                <!-- 4-width columns: (hidden by default) -->
-                <!----Combination Pill-->
-                <div class="row">
-                    <div class="grid_1" id="grid_1" style="height: 750px; display:visible" >
-                        <h3> Method #1</h3>
-                        <span onclick="closeTab(1)" class="closebtn">&times;</span>
-                        <h2 id="title_1"></h2>
-                        <p id="description_1">
-                        </p>
-                        <p id="fact_1_1"></p>
-                        <p id="fact_1_2"></p>
-                        <p id="fact_1_3"></p>
-                        <p id="fact_1_4"></p>
-                        <p id="fact_1_5"></p>
-                        <p id="fact_1_6"></p>
-                        <p id="fact_1_7"></p>
-                        <p id="fact_1_8"></p>
-                        <p id="fact_1_9"></p>
-                        <p id="fact_1_10"></p>
-                        <p id="fact_1_11"></p>
-                    </div>
-
-
-                    <div class="grid_2" id="grid_2" style="height: 750px; display:visible" >
-                        <h3> Method #2</h3>
-                        <span onclick="closeTab(2)" class="closebtn">&times;</span>
-                        <h2 id="title_2"></h2>
-                        <p id="description_2">
-                        </p>
-                        <p id="fact_2_1"></p>
-                        <p id="fact_2_2"></p>
-                        <p id="fact_2_3"></p>
-                        <p id="fact_2_4"></p>
-                        <p id="fact_2_5"></p>
-                        <p id="fact_2_6"></p>
-                        <p id="fact_2_7"></p>
-                        <p id="fact_2_8"></p>
-                        <p id="fact_2_9"></p>
-                        <p id="fact_2_10"></p>
-                        <p id="fact_2_11"></p>
-                    </div>
-
-                    <div class="grid_3" id="grid_3" style="height: 750px; display:visible" >
-                        <h3> Method #3</h3>
-                        <span onclick="closeTab(3)" class="closebtn">&times;</span>
-                        <h2 id="title_3"></h2>
-                        <p id="description_3">
-                        </p>
-                        <p id="fact_3_1"></p>
-                        <p id="fact_3_2"></p>
-                        <p id="fact_3_3"></p>
-                        <p id="fact_3_4"></p>
-                        <p id="fact_3_5"></p>
-                        <p id="fact_3_6"></p>
-                        <p id="fact_3_7"></p>
-                        <p id="fact_3_8"></p>
-                        <p id="fact_3_9"></p>
-                        <p id="fact_3_10"></p>
-                        <p id="fact_3_11"></p>
-                    </div>
-                </div>
-           </div>
-        </div>
-    
-
-
-        <div class="col-sm-12">
-
-                <div class="bs-calltoaction bs-calltoaction-primary">
-                    <div class="row">
-                        <div class="col-md-9 cta-contents">
-                            <h1 class="cta-title">Do You Having Trouble Tracking Your Birth Control Method?</h1>
-                            <div class="cta-desc">
                         
+                            Low Maintenance
+                            Lifetsyle
+                            94% Effective
+                            Effective Immediately
+                    </li>
+                    <li> <div class="title">Hormonal IUD
+                            <button id="bc-capsule" type="button" class="btn btn-default">Low Maintenance</button>
+                    </div>
+                        
+                    Low Maintenance
+                        Lifetsyle
+                        94% Effective
+                        Effective Immediately
+                    </li>
+            
+
+                    <li> <div class="title">Non Hormonal IUD
+                        <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
+                </div>
+                            Low Maintenance
+                            Lifetsyle
+                            94% Effective
+                            Effective Immediately
+                        </li>
+                
+
+                        <li> <div class="title">BC-Ring
+                            <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
+                    </div>
+                   
+                                Low Maintenance
+                                Lifetsyle
+                                94% Effective
+                                Effective Immediately
+                            </li>
+                        
+
+                            <li><div class="title">BC-Shot
+                                <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
+                        </div>
+                                    Low Maintenance
+                                    Lifetsyle
+                                    94% Effective
+                                    Effective Immediately
+                                </li>
+                            
+
+                                <li>  <div class="title">Patch
+                                <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
                             </div>
-                        </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="https://www.plannedparenthood.org/get-care/spot-on-period-tracker" class="btn btn-lg btn-block btn-default">Check Out This App</a>
-                        </div>
+                                
+                                
+                                    Low Maintenance
+                                        Lifetsyle
+                                        94% Effective
+                                        Effective Immediately
+                                    </li>
+                                
+
+                                    <li>  <div class="title">Implant
+                                        <button id="bc-capsule" type="button" class="btn btn-default">Use On Schedule</button>
+                                </div>
+                                
+                                    
+                                            Lifetsyle
+                                            94% Effective
+                                            Effective Immediately
+                                        </li>
+                                    </ul>
+
+
+            </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">               
+        <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Combination Pill' onclick="openTab('Combination Pill');">
+                        <img src="../static/css/combination_patch_glyph2.png" />
+                    </button>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Progestin Pill' onclick="openTab('Progestin Pill');">
+                        <img src="../static/css/progestin_patch_glyph2.png" />
+                    </button>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Hormonal IUD' onclick="openTab('Hormonal IUD');">
+                        <img src="../static/css/hormonal_iud_glyph_.png" />
+                    </button>
+                </div>
+
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Non Hormonal IUD' onclick="openTab('Non Hormonal IUD');">
+                        <img src="../static/css/non_hormonal_iud_glyph.PNG" />
+                    </button>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Ring' onclick="openTab('Ring');">
+                            <img src="../static/css/ring_glyph.PNG" />
+                    </button>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Shot' onclick="openTab('Shot');">
+                        <img src="../static/css/shot_glyph.PNG" />
+                    </button>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Patch' onclick="openTab('Patch');">
+                        <img src="../static/css/patch_glyph.PNG" />
+                    </button>
+                </div>
+                
+                <div class="col-xs-4 col-sm-4 col-md-2">
+                    <button id="button" value='Implant' onclick="openTab('Implant');">
+                            <img src="../static/css/implant_glyph.PNG" />
+                    </button>
+               
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="side_grid_2 " style="height : 750px;">
+                         <div class="upper_left_space" style="height: 35px;">
+                             <ul id="side_grid">
+                             <li class="Description" style="height: 250px;"></li>
+                                 <span class="small_body_copy_italic"> Description:</span>
+                                 <li  class="Medical_procedure" style="height: 40px;"></li>
+                                  <span class="small_body_copy_italic"> Medical Procedure:</span>
+         
+                                 <li class="Prescription_needed" style="height: 25px;"></li>
+                                 <span class="small_body_copy_italic"> Prescription required?:</span>
+         
+                                 <li class="Action_Ready" style="height: 20px;"></li>
+                                 <span class="small_body_copy_italic"> Ready for Action:</span>
+         
+                                 <li  class="How much" style="height: 20px;"></li>
+                                 <span class="small_body_copy_italic"> Cost:</span>
+         
+                                 <li  class="Duration" style="height: 20px;"></li>
+                                  <span class="small_body_copy_italic"> Shelf Life:</span>
+         
+                                 <li class="Safe_for_new_moms" style="height: 20px;"></li>
+                                 <span class="small_body_copy_italic"> New Mom Certified?:</span>
+         
+                                 <li class="Fool Proof" style="height: 20px;"></li>
+                                 <span class="small_body_copy_italic"> Fool Proof:</span>
+         
+                                 <li class="Effectiveness" style="height: 20px;"></li>
+                                 <span class="small_body_copy_italic"> Effectiveness:</span>
+         
+                                 <li  class="STI_Prevention" style="height: 23px;"></li>
+                                 <span class="small_body_copy_italic"> STI Prevention:</span>
+         
+                                  <li  class="Helps_with_period" style="height: 23px;"></li>
+                                 <span class="small_body_copy_italic"> Aids Menstrual Cycle:</span>
+                         </ul>
+                         </div>
                      </div>
+         
+                         <!-- 4-width columns: (hidden by default) -->
+                         <!----Combination Pill-->
+                         <div class="row">
+                             <div class="grid_1" id="grid_1" style="height: 750px; display:visible" >
+                                 <h3> Method #1</h3>
+                                 <span onclick="closeTab(1)" class="closebtn">&times;</span>
+                                 <h2 id="title_1"></h2>
+                                 <p id="description_1">
+                                 </p>
+                                 <p id="fact_1_1"></p>
+                                 <p id="fact_1_2"></p>
+                                 <p id="fact_1_3"></p>
+                                 <p id="fact_1_4"></p>
+                                 <p id="fact_1_5"></p>
+                                 <p id="fact_1_6"></p>
+                                 <p id="fact_1_7"></p>
+                                 <p id="fact_1_8"></p>
+                                 <p id="fact_1_9"></p>
+                                 <p id="fact_1_10"></p>
+                                 <p id="fact_1_11"></p>
+                             </div>
+         
+         
+                             <div class="grid_2" id="grid_2" style="height: 750px; display:visible" >
+                                 <h3> Method #2</h3>
+                                 <span onclick="closeTab(2)" class="closebtn">&times;</span>
+                                 <h2 id="title_2"></h2>
+                                 <p id="description_2">
+                                 </p>
+                                 <p id="fact_2_1"></p>
+                                 <p id="fact_2_2"></p>
+                                 <p id="fact_2_3"></p>
+                                 <p id="fact_2_4"></p>
+                                 <p id="fact_2_5"></p>
+                                 <p id="fact_2_6"></p>
+                                 <p id="fact_2_7"></p>
+                                 <p id="fact_2_8"></p>
+                                 <p id="fact_2_9"></p>
+                                 <p id="fact_2_10"></p>
+                                 <p id="fact_2_11"></p>
+                             </div>
+         
+                             <div class="grid_3" id="grid_3" style="height: 750px; display:visible" >
+                                 <h3> Method #3</h3>
+                                 <span onclick="closeTab(3)" class="closebtn">&times;</span>
+                                 <h2 id="title_3"></h2>
+                                 <p id="description_3">
+                                 </p>
+                                 <p id="fact_3_1"></p>
+                                 <p id="fact_3_2"></p>
+                                 <p id="fact_3_3"></p>
+                                 <p id="fact_3_4"></p>
+                                 <p id="fact_3_5"></p>
+                                 <p id="fact_3_6"></p>
+                                 <p id="fact_3_7"></p>
+                                 <p id="fact_3_8"></p>
+                                 <p id="fact_3_9"></p>
+                                 <p id="fact_3_10"></p>
+                                 <p id="fact_3_11"></p>
+                             </div>
+                         </div>
+                    </div>
                 </div>
             
-                        
-        <p>Do you Have Trouble Keeping up with your Birth Control Method?
-            Try The Spot On Tracker App.</p>
-            Spot On is a period and birth control tracking mobile app </p>
-            available for Android and IOS phones that can help 
-           <p>you stay on top of your birth control method and track your cycle.
-            The App provides customized appointment reminders, 
-            and puts birth control and sexual health resources from the experts at Planned Parenthood. For more information visit Planned Parenthood's page </p>
-             </div>
-             </div>
-
-            </div>
-        </div>
-   </div>
+            
 
 
-
-            </div><!-- close wrapper -->
-            <div></div>
-    
-    <footer>
-        <ul id="footer">
-            <li >
-                About This Project
-            </li>
-
-            <li >
-                Visualizations
-            </li>
-
-            <li >
-                    Latest News
-                </li>
-
-            <li >
-                About the Team
-            </li>
-            <li >
-                Github Repository
-            </li>
-        </ul>
-        <p>(c)Copyright GWBootcamp Capstone project</p>
-
-    </footer>
-    </div>
+                <footer>
+                        <ul id="footer">
+                            <li >
+                                Github
+                            </li>
+                
+                            <li >
+                                Linkedin
+                            </li>
+                
+                            <li >
+                                    Email
+                                </li>
+            
+                        </ul>
+                        <p>(c)Copyright GWBootcamp Capstone project</p>
+                
+                    </footer>
+            
+           
                            
 
 
@@ -352,80 +388,8 @@
 crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 crossorigin="anonymous"></script>
-<script>
-// Hide all elements with class="grid_3 alpha", except for the one that matches the clickable image selected
+     
 
-
-var item_titles = ['Combination Pill', 'Progestin Pill', 'Hormonal IUD', 'Non Hormonal IUD', 'Ring', 'Shot', 'Patch', 'Implant'];
-var item_fact1s = ['Combination pills have 2 hormones: estrogen and progestin. These are the most common type of birth control pill. You have to remember to take everyday', 
-'Progestin-only pills have 1 kind of hormone (progestin) — these pills don’t have any estrogen. You must take progestin-only pills within the same 3 hours every day to be protected from pregnancy.', 
-'A hormonal IUD is a small piece of flexible plastic shaped like a T. The hormonal IUD releases a tiny amount of the hormone progestin into your body over several years',
- 'Non-hormonal IUDs use copper to prevent pregnancy. Sperm doesn’t like copper — it changes the way sperm cells move so they can’t swim to an egg. If sperm can’t make it to an egg, pregnancy can’t happen.', 
- 'The birth control ring (AKA NuvaRing) is a safe, simple, and affordable birth control method that you wear inside your vagina. The small, flexible ring prevents pregnancy by releasing hormones into your body. ', 
- 'The depo shot (AKA Depo-Provera) is an injection you get once every 3 months. It’s a safe, convenient, and private birth control method that works really well if you always get it on time.', 
- 'The transdermal contraceptive patch is a safe, simple, and affordable birth control method that you wear on the skin of your belly, upper arm, butt, or back. It releases hormones that prevent pregnancy.', 
- 'The birth control implant (AKA Nexplanon) is a tiny, thin rod about the size of a matchstick. The implant releases hormones into your body that prevent you from getting pregnant.'];
-var item_fact2s = ['No', 'No', 'Yes', 'Yes', 'Yes', 'No', 'No', 'Yes'];
-var item_fact3s = ['Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes'];
-var item_fact4s = ['No', 'No', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'Yes'];
-var item_fact5s = ['$0-$50', '$0-$50', '$0-$1000', '$0-$1000', '$0-$200', '$0-$100', '$0-$150', '$0-$1500'];
-var item_fact6s = ['Once Daily','Once Daily', 'Up to 12 Years', 'Up to 12 Years', 'Every Month', 'Every 3 Months', 'Once A Week', 'Every 5 Years'];
-var item_fact7s = ['Not really', 'Yes', 'Yes', 'Yes', 'No', 'No', 'Yes', 'Yes'];
-var item_fact8s = ['Yes', 'Yes', 'Yes', 'yes', 'Yes', 'Yes', 'Yes', 'Yes'];
-var item_fact9s = ['91%', '91%', '99%', '99%', '91%', '94%', '91%', '99%'];
-var item_fact10s = ['No', 'No', 'No', 'No', 'No', 'No', 'No', 'No'];
-var item_fact11s = ['Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'Yes'];
-
-var open_tabs = ["", "", ""]; //currently open tabs
-
-function closeTab(tabNumber) {
-    document.getElementById("grid_"+tabNumber).style.display = "none";
-    open_tabs[tabNumber-1] = "";
-}
-
-function openTab(tabName) {
-    var matched = -1;
-    for(var i=0;i<item_titles.length;i++) {
-        if(item_titles[i] == tabName) {
-            matched = i;
-        }
-    }
-
-    var available = -1;
-    for(var i=0;i<open_tabs.length;i++) {
-        if(open_tabs[i] == "") {
-            available = i;
-            break;
-        }
-    }
-    
-
-    console.log("" + available + " " + matched);
-    if(available == -1 || matched == -1) {
-        alert("Please choose no more than 3 methods at a time");
-    }
-
-    open_tabs[available] = item_titles[matched];
-    var grid_id = available+1;
-
-    document.getElementById("grid_"+grid_id).style.display = "inline-grid";
-    document.getElementById("title_"+grid_id).innerHTML = item_titles[matched];
-    document.getElementById("fact_"+grid_id+"_1").innerHTML = item_fact1s[matched];
-    document.getElementById("fact_"+grid_id+"_2").innerHTML = item_fact2s[matched];
-    document.getElementById("fact_"+grid_id+"_3").innerHTML = item_fact3s[matched];
-    document.getElementById("fact_"+grid_id+"_4").innerHTML = item_fact4s[matched];
-    document.getElementById("fact_"+grid_id+"_5").innerHTML = item_fact5s[matched];
-    document.getElementById("fact_"+grid_id+"_6").innerHTML = item_fact6s[matched];
-    document.getElementById("fact_"+grid_id+"_7").innerHTML = item_fact7s[matched];
-    document.getElementById("fact_"+grid_id+"_8").innerHTML = item_fact8s[matched];
-    document.getElementById("fact_"+grid_id+"_9").innerHTML = item_fact9s[matched];
-    document.getElementById("fact_"+grid_id+"_10").innerHTML = item_fact10s[matched];
-    document.getElementById("fact_"+grid_id+"_11").innerHTML = item_fact11s[matched];
-    
-
-    
-}
-
-</script>                             
+<script src="static/js/geninfo.js"></script>
 </body>
 </html>

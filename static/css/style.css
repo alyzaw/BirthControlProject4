@@ -291,10 +291,12 @@ transform: translate(0px, 500px);
   }
 
   #button {
-    padding: 15px 0;
+    padding: 15px;
+    position: relative;
     margin: 15px 0;
-    background-color:  #1E8783;
+    background-color:none;
     border-radius: 15px;
+    display: inline-block;
     width: 40%;
     height: 30%;
     font-family: 'Varela Round';
@@ -336,6 +338,72 @@ font-family: 'Varela Round';
   margin-right: auto;
   width: 50%;
   }
+
+
+  .container-tiles{
+  width:100%;
+  padding:20px;
+  border:5px solid #812443;
+  overflow: hidden;
+  background:white;
+  margin: 20px auto;
+
+  }
+
+.conatiner-tiles ul{
+margin:0px;
+padding:0px;
+}
+
+.section{
+
+  margin-top:0px;
+}
+ #bc-capsule
+{
+  position: relative;
+    top: 5px;
+    right: auto;
+    text-align:center;
+    background-color: #812443;
+    color: white;
+    bottom: auto;
+    left: 0%;
+    margin:0px 10px,0,5px;
+
+
+}
+.container-tiles ul li{
+
+    list-style: none;
+    float:left;
+    width:20%;
+    border:1px dashed #bfbfbf;
+    height:300px;
+    background:white;
+    margin:20px 20px 0px 20px;
+
+  }
+.container-tiles ul .title{
+width: 100%;
+height:30%;
+line-height: 50px;
+background-color:#812443;
+opacity: 80%;
+text-align: center;
+font-size: 3rem;
+color:white;
+
+}
+
+
+
+
+  ul{
+list-style: none;
+text-decoration: none;
+
+  }
      
 .sidemenu {
 background-color: #01ABBA;
@@ -345,20 +413,23 @@ padding: 50px;
 font-size: 24px; 
 font-weight: bold;
 }
+
+  
 .side_grid_2{
 float:left;
 width:15%;
+text-decoration: 1px dashed black;
 border-bottom: 1px dashed #bfbfbf;
-background-color: #efefef;
+background-color: darkgray;
 
 }
      
 footer {
   clear: both;
   text-align: center;
-  margin: 20px 20px;
+  margin: 30px 30px 50px 50px;
   padding-top: 50px;
-  background-color: black;
+  background-color:#1E8783;
   font-family: 'Chivo';
   color: #CCC;
   }
@@ -374,7 +445,6 @@ footer {
     .bs-calltoaction{
       position: relative;
       width:auto;
-      background-color:orchid;
       padding: 15px 25px;
       border: 1px solid black;
       margin-top: 10px;
@@ -410,6 +480,13 @@ footer {
   border-bottom: 1px dashed #000;
 }
 
+
+.grid_1,
+.grid_2,
+.grid_3 h3{
+
+  text-align: center;
+}
 .grid_1,
 .grid_2,
 .grid_3 {
@@ -421,7 +498,7 @@ margin-right: 10px;
 border: 1px dashed #bfbfbf;
 border-bottom: 1px dashed #bfbfbf;
 padding:0;
-background-color: #1E8783;
+background-color: none;
 }
 
 .closebtn{

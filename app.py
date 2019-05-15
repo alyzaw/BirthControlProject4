@@ -91,8 +91,9 @@ def effectreview():
 
 @app.route("/birthcontrol_db")
 def birthcontrol():
+    conn = engine.connect()
     #create list of column names
-    BC_df = pd.read_sql("SELECT * FROM birth_control_all", conn)
+    BC_df = pd.read_sql("SELECT Method, Birth_Control, Star_Rating, Vader_Scale, Review, `Use`, `Publish_Date`, `Source` FROM birth_control_all", conn)
     BC_json = BC_df.to_dict(orient="records")
     return jsonify(BC_json)
 
