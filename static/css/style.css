@@ -231,7 +231,8 @@
   height: 450px;
   padding: 20px;
   margin: 0;
-  background-image: url("../css/robobc2.png");
+  /* background-image: url("../css/robobc2.png"); */
+  background-image: url("../css/robobanner.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
