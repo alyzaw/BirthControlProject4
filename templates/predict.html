@@ -14,6 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Bungee+Shade'rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+    
 
 </head>
 
@@ -53,9 +54,22 @@
             <br>
             <div class="hero hero-page5 text-center">
                     <!-- <br><br> -->
-                    <h1>Can our AI guess your contrapcetion?</h1>
+                    <h1>Can our AI guess your contraception?</h1>
                     <!-- <p>Watch our trained model makes its best attempt!</p> -->
-              </div>
+                </div>
+                <br>
+
+                <div class="container">
+                        <div id="intro">
+                        <div class="text-center">
+                <h2 style="font-size:28px">We created a Machine Learning model utilizing the Tensorflow – Keras module against the 
+                    <a href = "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/">Center for Disease Control’s National Survey for Family Growth 2006- 2015</a> 
+                    to see if we could predict your contraception based on your demographics. 
+                    The accuracy of this model was 54% against a test dataset. This model is for predictive purposes only and should not be used as medical advice.</h2>
+                </div>
+            </div>
+        </div>
+                  <br>
 
               <br>
               <div class="panel panel-default">
@@ -67,6 +81,230 @@
                     <div class="col-md-6">
                             <div class="dropdown text-center">
               <!-- <div class="dropdown text-left" style="padding-left:10%"> -->
+                    <h2>How old are you?</h2>
+                    <select id="selDataset1" >
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="Other">Other</option>
+                    </select>
+                </div>
+                <br>
+                <div class="dropdown text-center">
+                      <h2>What is your current marital status?</h2>
+                      <select id="selDataset2" >
+                      <option value="1">Married to a person of opposite sex</option>
+                      <option value="2">Not married, living with partner of opposite sex</option>
+                      <option value="3">Widowed</option>
+                      <option value="4">Divorced or annulled</option>
+                      <option value="5">Seperated</option>
+                      <option value="6">Never been married</option>
+                      <option value="9">Don't know</option>
+                      <option value="Other">Other</option>
+                          </select>
+                      </div>
+                      <br>
+                      <div class="dropdown text-center">
+                            <h2>What race do you identify as?</h2>
+                                    <select id="selDataset3" >
+                                        <option value="1">Black or African American</option>
+                                        <option value="2">White</option>
+                                        <option value="3">Asian</option>
+                                        <option value="3">Native American</option>
+                                        <option value="3">Other</option>
+                                        
+                                </select>
+                            </div>
+                      <br>
+                      <div class="dropdown text-center">
+                        <h2>Are you of Hispanic Origin?</h2>
+                                <select id="selDataset4" >
+                                    <option value="1">Hispanic or Latino</option>
+                                    <option value="2">Non-Hispanic</option>
+                            </select>
+                        </div>
+                        <br>
+                      <div class="dropdown text-center">
+                            <h2>What is your highest level of education?</h2>
+                                    <select id="selDataset5">
+                                        <option value="5">9th Grade or Less</option>
+                                        <option value="6">10th Grade</option>
+                                        <option value="7">11th Grade</option>
+                                        <option value="8">12th Grade (No Diploma or GED)</option>
+                                        <option value="9">High School Graduate</option>
+                                        <option value="10">Some college but no degree</option>
+                                        <option value="11">Associate Degree</option>
+                                        <option value="12">Bachelor's Degree</option>
+                                        <option value="13">Master's Degree</option>
+                                        <option value="14">Professional Degree</option>
+                                        <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <p align="center">
+                                    <br/>
+                                    <br/>
+                                    <button id="Submitbutton" class="button" value='Submit' onclick="makePredictions()">Submit
+                                        <!-- <img src="../static/css/pill_glyph.PNG" /> -->
+                                    </button>
+                                </p>
+                                </div>
+
+                                <!-- <p class="col-md-6" align="center"> -->
+     
+
+                            <!-- </div> -->
+
+
+
+                                <div class="col-md-6">
+                                        <!-- <div id="result" class="text-center" style = "transition-duration: 2s">     -->
+                                <div id="result" class="text-center" style="padding-top: 20%">
+
+                                        <img id = "pre-img" width= 80% src="../static/css/theVillain.jpg"/><br>
+
+                                        <img id = "result-img" src=""/><br>
+
+
+                                    <!-- <img id = "result-img" src="../static/css/theVillain.jpg"/><br> -->
+                                    <span id="result-text">What will our AI predict???
+                                    </span>
+    
+                                </div>
+                            </div>
+ </div>
+                            
+
+                        </div>
+                        <br>
+              
+              
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+              crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+              crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+              <script src="static/js/predict.js"></script>
+
+  </body>
+
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Predictions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee+Shade'rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+    
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+              </button>               
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/"><span class="glyphicon glyphicon-home"></span> Birth Control Review</a></li>
+                    <li ><a href="/table"><span class="glyphicon glyphicon-list-alt"></span> User Reviews</a></li>
+                    <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
+                    <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
+                    <li><a href="/predictions"><span class="glyphicon glyphicon-eye-open"></span> Predictions</a></li>
+                    <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+                    
+                </ul>              
+              </div>
+             
+            </div>
+    
+          </nav>
+     
+            <br>
+            <br>
+            <div class="hero hero-page5 text-center">
+     
+                    <h1>Can our AI guess your contraception?</h1>
+
+                </div>
+                <br>
+
+                <div class="container">
+                        <div id="intro">
+                        <div class="text-center">
+                <h2 style="font-size:28px">We created a Machine Learning model utilizing the Tensorflow – Keras module against the 
+                    <a href = "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NSFG/">Center for Disease Control’s National Survey for Family Growth 2006- 2015</a> 
+                    to see if we could predict your contraception based on your demographics. 
+                    The accuracy of this model was 54% against a test dataset. This model is for predictive purposes only and should not be used as medical advice.</h2>
+                </div>
+            </div>
+        </div>
+                  <br>
+
+              <br>
+              <div class="panel panel-default">
+                    <div class="panel-body">
+              <h1 style="text-align:center">Please select your demographic information, and watch our trained AI try to predict your birth control method.</h1>
+              <br> <br>
+
+              <div class="row">
+                    <div class="col-md-6">
+                            <div class="dropdown text-center">
+
                     <h2>How old are you?</h2>
                             <select id="selDataset1" >
                                 <option value="15">15</option>
@@ -146,9 +384,11 @@
                                     </select>
                                 </div>
 
-                                <p align="center"><br/><br/>
-                                <button id="Submitbutton" class="button" value='Submit' onclick="makePredictions()">Submit
-                                        <!-- <img src="../static/css/pill_glyph.PNG" /> -->
+                                <p align="center">
+                                    <br/>
+                                    <br/>
+                                    <button id="Submitbutton" class="button" value='Submit' onclick="makePredictions()">Submit
+   
                                     </button>
                                 </p>
 
@@ -157,10 +397,15 @@
 
 
                                 <div class="col-md-6">
-                                        <div id="result" class="text-center">    
-                                <!-- <div id="result" class="text-center" style="padding-top: 20%"> -->
+                                        <div id="result" class="text-center" style = "transition-duration: 2s">    
+      
 
-                                    <img id = "result-img" src="../static/css/theVillain.jpg"/><br>
+                                        <img id = "pre-img" src="../static/css/theVillain.jpg"/><br>
+
+                                        <img id = "result-img" src=""/><br>
+
+
+
                                     <span id="result-text">What will our AI predict???
                                     </span>
     
@@ -171,13 +416,9 @@
 
                         </div>
                         <br>
-
-
-        
-
               
               
-                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
               crossorigin="anonymous"></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
               crossorigin="anonymous"></script>
@@ -188,4 +429,4 @@
 
   </body>
 
-</html>
+</html> -->

@@ -56,9 +56,15 @@ load_outcomes()
 
 @app.route("/mlm/<input_tuple>")
 def find_output(input_tuple):
-    output = model.loc[model['Input'] == input_tuple]
-    returned_output = output.iloc[0,2]
-    output_str = str(returned_output)
+    
+    try:   
+        output = model.loc[model['Input'] == input_tuple]
+        returned_output = output.iloc[0,2]
+        output_str = str(returned_output)
+    except:
+        return jsonify({"data": '99'})
+
+    
     return jsonify({"data": output_str})
 
 @app.route("/predictions")
@@ -238,6 +244,15 @@ def scrape_news():
     }
 
     return render_template("newsscrape.html", recentNews=news_data)
+
+# @app.route("/table_db")
+# def user_review_():
+#     conn = engine.connect()
+#     #create list of columns
+#     bc_user_table = pd.read_sql("SELECT Method, Birth_Control, Star_Rating, Vader_Scale, Review, `Use`, `Date`, `Source` FROM table_db", conn)
+#     bc_user_table_json = bc_user_table.to_dict(orient="records")
+#     return jsonify(bc_user_table_json)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
