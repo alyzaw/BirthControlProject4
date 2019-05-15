@@ -29,40 +29,43 @@ function makePredictions() {
           img.style.display = "block";
           img.src = "../static/css/surgical.png";
           document.getElementById("result-text").innerText =
-            "Surgical Sterilization";
+            "AI predicts: Surgical Sterilization";
           break;
 
         case "1":
-          document.getElementById("result-img").src =
-            "../static/css/iud_implant.png";
-          document.getElementById("result-text").innerText = "IUD/Implant";
+          document.getElementById("result-img");
+          img.style.display = "block";
+          img.src = "../static/css/iud_implant.png";
+          document.getElementById("result-text").innerText = "AI predicts: IUD or Implant";
           break;
 
         case "2":
           img = document.getElementById("result-img");
-          // img.style = "transition-duration: 2s";
-          // img.style = "display: none";
           img.style.display = "block";
           img.src = "../static/css/ring_patch_shot_pill.png";
           document.getElementById("result-text").innerText =
-            "Pill/Ring/Patch/Shot";
+            "AI predicts: Pill, Ring, Patch, Shot";
           break;
 
         case "3":
-          document.getElementById("result-img").src =
-            "../static/css/condoms.png";
-          document.getElementById("result-text").innerText = "Condoms";
+          document.getElementById("result-img");
+          img.style.display = "block";
+          img.src = "../static/css/condoms.png";
+          document.getElementById("result-text").innerText = "AI predicts: Condoms";
           break;
 
         case "5":
-          document.getElementById("result-img").src =
-            "../static/css/calender_withdrawal.png";
+          document.getElementById("result-img");
+          img.style.display = "block";
+          img.src = "../static/css/calender_withdrawal.png";
           document.getElementById("result-text").innerText =
-            "Withdrawal/Calender";
+            "AI predicts: Withdrawal/Family Planning Techniques";
           break;
 
         case "99":
-          document.getElementById("result-img").src = "../static/css/shrug.png";
+          document.getElementById("result-img");
+          img.style.display = "block";
+          img.src = "../static/css/shrug.png";
           document.getElementById("result-text").innerText = "Shoot, I dunno";
           break;
       }
@@ -71,7 +74,7 @@ function makePredictions() {
       //   document.getElementById("result-text").innerText="Shoot, I dunno";
       console.log(err);
     }
-    console.log("togglign agan")
+    // console.log("togglign agan")
     // setTimeout(() =>  $image.toggleClass('transparent'), 1000 )
     // // setTimeout(() =>  $text.toggleClass('transparent'), 1000 )
    

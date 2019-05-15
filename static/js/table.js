@@ -10,26 +10,29 @@ function showhide() {
 // $(document).ready(function () {
 
   // $.getJSON('/table_db', function (jsondata) {
-    $.getJSON('/birthcontrol_db', function (jsondata) {
+    $.getJSON('/bc_table', function (jsondata) {
         //hide the loading text
     showhide();
 
-    const cleanedData = _.map(jsondata, object => _.omit(object, ['Compound', 'Positive', 'Negative', 'Neutral']));
-    var data = cleanedData.map(
+    // const cleanedData = _.map(jsondata, object => _.omit(object, ['Compound', 'Positive', 'Negative', 'Neutral']));
+    // var data = cleanedData.map(
+    //   cols => Object.values(cols)
+
+    // );
+
+    var data = jsondata.map(
       cols => Object.values(cols)
-
+  
     );
-    //console.log({ data })
-
 
 
     // Reference your table
     $('#mytable').DataTable({
       data: data,
-      colReorder: {
-                // order: [ 1, 0, 5, 3, 7, 6,2,4 ]
-        order: [0, 1, 5, 7, 3, 6, 2, 4]
-    },
+    //   colReorder: {
+    //             // order: [ 1, 0, 5, 3, 7, 6,2,4 ]
+    //     order: [0, 1, 5, 7, 3, 6, 2, 4]
+    // },
 
 
 
