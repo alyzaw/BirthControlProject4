@@ -298,19 +298,6 @@ transform: translate(0px, 500px);
   font-family: "Varela Round";
 }
 
-<<<<<<< HEAD
-  #button {
-    padding: 15px;
-    position: relative;
-    margin: 15px 0;
-    background-color:none;
-    border-radius: 15px;
-    display: inline-block;
-    width: 40%;
-    height: 30%;
-    font-family: 'Varela Round';
-    }
-=======
 .navbar-nav :hover {
   color: #1e8783;
   background-color: #85c441;
@@ -325,7 +312,6 @@ transform: translate(0px, 500px);
   height: 30%;
   font-family: "Varela Round";
 }
->>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
 
 img {
   max-width: 100%;
@@ -358,7 +344,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-<<<<<<< HEAD
   }
 
 
@@ -377,10 +362,7 @@ margin:0px;
 padding:0px;
 }
 
-.section{
 
-  margin-top:0px;
-}
  #bc-capsule
 {
   position: relative;
@@ -464,15 +446,11 @@ footer {
     
     }
 
-    .bs-calltoaction{
-      position: relative;
-      width:auto;
-      padding: 15px 25px;
-      border: 1px solid black;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-  }
+  .searchPanes{
+background-color: rgb 135,193,189;
+color:812443;
+font-weight:bold;
+ }
 
 
 .small_body_copy_italic{
@@ -513,25 +491,6 @@ background-color: none;
 .closebtn{
   font-size: 20px;
   float:right;
-=======
-}
-
-.sidemenu {
-  background-color: #01abba;
-  float: right;
-  width: 30%;
-  padding: 50px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#footer {
-  clear: both;
-  text-align: right;
-  margin: 20px 0;
-  padding: 10px 5px;
-  font-family: "Chivo";
->>>>>>> 0463ef1a96f2c48d643360a149b85150d3137e21
 }
 
 .dropdown {
