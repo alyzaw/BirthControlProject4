@@ -358,7 +358,7 @@ footer {
   text-align: center;
   margin: 20px 20px;
   padding-top: 50px;
-  background-color: #1E8783;
+  background-color: black;
   font-family: 'Chivo';
   color: #CCC;
   }
@@ -370,6 +370,17 @@ footer {
     float: right;
     
     }
+
+    .bs-calltoaction{
+      position: relative;
+      width:auto;
+      background-color:orchid;
+      padding: 15px 25px;
+      border: 1px solid black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+  }
 
 
 #side_by_side{margin-left: auto;
@@ -410,7 +421,7 @@ margin-right: 10px;
 border: 1px dashed #bfbfbf;
 border-bottom: 1px dashed #bfbfbf;
 padding:0;
-background-color: #efefef;
+background-color: #1E8783;
 }
 
 .closebtn{

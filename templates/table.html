@@ -1,11 +1,13 @@
 <html>
 <head>
-  <title>Deborah Test</title>
+  <title>Data Table</title>
 
   <link rel="shortcut icon" href="">
   <!-- Import JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -16,7 +18,7 @@
   <!-- Import Search Panes -->
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 
 
 </head>
@@ -81,15 +83,15 @@
                             <th class="table-head">Method</th>
                             <th class="table-head">Brand</th>
                             <th class="table-head">User Rating</th>
-                            <th class="table-head">User Review</th>
                             <th class="table-head">Vader Scale</th>
-                            <th class="table-head">Date Published</th>
+                            <th class="table-head">User Review</th>
                             <th class="table-head">Use</th>
+                            <th class="table-head">Date Published</th>
                             <th class="table-head">Source</th>
                     </tr>
             
                     </thead>
-              <tbody id="tbody"></tbody>
+              <tbody></tbody>
             </table>
           </div>
         </div>
@@ -99,8 +101,8 @@
       <span class="bottom"></span>Birth Control
     </footer> -->
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <!-- <script src="static/js/data.js"></script> -->
   <script src="static/js/table.js"></script>
 </body>

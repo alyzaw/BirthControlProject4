@@ -18,6 +18,7 @@ pymysql.install_as_MySQLdb()
 
 is_prod = os.environ.get('IS_HEROKU', None)	
 
+
 if is_prod:	
     endpoint = os.environ.get('endpoint')	
     instance = os.environ.get('instance')	
@@ -33,7 +34,11 @@ dburl = f'mysql://{username}:{password}@{endpoint}:{port}/{instance}'
 app = Flask(__name__)
 
 
+
+
 app.config["SQLALCHEMY_DATABASE_URI"] = dburl
+app.config['JSON_SORT_KEYS'] = False    
+
 db = SQLAlchemy(app)
 engine = create_engine(f"mysql://{username}:{password}@{endpoint}:{port}/{instance}")
 conn = engine.connect()
@@ -167,7 +172,7 @@ def sideeffectsmethod(choice):
 def user_review_():
     conn = engine.connect()
     #create list of columns
-    bc_user_table = pd.read_sql("SELECT Method, Birth_Control, Star_Rating, Review,Vader_Scale, `Date`, `Use`, `Source` FROM table_db", conn)
+    bc_user_table = pd.read_sql("SELECT Method, Birth_Control, Star_Rating, Vader_Scale, Review, `Use`, `Date`, `Source` FROM table_db", conn)
     bc_user_table_json = bc_user_table.to_dict(orient="records")
     return jsonify(bc_user_table_json)
 
