@@ -1,9 +1,18 @@
 
+function showhide() {
+  var img = document.getElementById("load-image");
+  img.style.display = "none";
+  var text = document.getElementById("load-text");
+  text.style.display = "none";
+}
+
+
+
 //load in the data 
 
   $.getJSON("/bc_table", function (jsondata) {
       //hide the loading text
-
+showhide();
 
   var data = jsondata.map(
     cols => Object.values(cols)
