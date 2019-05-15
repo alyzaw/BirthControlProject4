@@ -453,19 +453,6 @@ footer {
   }
 
 
-#side_by_side{margin-left: auto;
-  margin-right: auto;
-  width:960px;
-  height:2200px;
-  display: block;
-  margin-top: 100px;
-  float: left;
-  margin-bottom: 20px;
-  z-index: 1;
-  position: relative;
-
-}
-
 .small_body_copy_italic{
   font-style: italic;
   font-weight: normal;
