@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Birth Control Review</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Bungee+Shade'rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
 
+    <link rel="icon" type="image/png" href="../static/css/iud_loading.png">
 
-
-    
 </head>
 
 <body>
@@ -27,8 +27,10 @@
             <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
 
               </button>               
@@ -41,23 +43,31 @@
                     <li><a href="/side_effects"><span class="glyphicon glyphicon-th-large"></span> Side Effects Analysis</a></li>
                     <li ><a href="/news"><span class="glyphicon glyphicon-bullhorn"></span> Recent News</a></li>
                     <li><a href="/predictions"><span class="glyphicon glyphicon-eye-open"></span> Predictions</a></li>
-                    <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li>
+                    <!-- <li><a href="/team"><span class="glyphicon glyphicon-user"></span> Team</a></li> -->
                 </ul>              
               </div>
               <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
-        </nav>
-        
-        <div class="hero hero-home text-center">
-            <h1>Birth Control Review</h1>
-            <p>Exploring the side effects</p>
-        </div>
-                
-        <!-- Page content -->
-        <div class="container">
-            <div id="intro">
-                <div class="text-center">
+          </nav>
+     
+            <br>
+            <br>
+            <div class="hero hero-home text-center">
+                    <!-- <br><br> -->
+                <h1>Birth Control Review</h1>
+                <br>
+                <p>Exploring the side effects</p>
+              </div>
+                 
+            <br>
+            <br>
+
+
+                <!-- Page content -->
+                <div class="container">
+                    <div id="intro">
+                    <div class="text-center">
                     <h2>Welcome to the wide world of</h2><br>
 
                     <h1 data-heading="Slide">Birth Control</h1>
@@ -75,32 +85,66 @@
                     Delve into our analysis of the birth control experience. Learnt which side effects appear to be most common for each method, which options users are most satisfied with, and which options fall behind.
                     What does the future of contraception look like? -->
                 </div>
-            </div>
 
-            <div class="row" style="text-align: center">
-                <div class="site-nav">
-                    <div class="col-xs-4 col-sm-4 col-md-4">
-                        <a href="/table"><h3><em>User Reviews</em></h3></a>
-                        <a href="/table"><button><img src="../static/css/contraception-thoughts-button.jpg" /></button></a>
-                        <p><em>Check out real user reviews, sort through the various methods of female contraception, 
-                                and search for comments about specific side effects.</em></p>
+                    <!-- <div class="row">
+                        <section id="wrapper">
+                            
+                
+                            <article>
+                                <p>
+                                    Accoding to a survey by the Center for Disease Control, two-thirds of women of child bearing age are using some form of contraception.
+                                While this includes non-medicinal methods such as condoms or surgical sterilization, a huge portion of those women are using medications as their method of birth control.
+                            These medications are know for having a wide array of side effects, often having a significant impact on the users life. 
+                        Information dispersed by pharmaceutical companies and medical professionals is often vague and generalized. While the side effects listed for each method of birth control
+                    often look identical to each other, the actual usesr experience can vary significantly. We wanted to look at user reviews to gauge if the actual user experience on the different available 
+                    birth control methods differed from each other, and if there were any options that were noticable better or worse than others. We decided to collect user reviews for various methods of birth control, to see if we could analyze feedback 
+                    provided by women and discover trends that arise within the reported experiences women have with each birth control option currently on the market. </p> <br>
+                                     
+                                <p>
+                                     We scraped our data from two sites, EverydayHealth.com and Drugs.com, and used the information collected for the rest of our analysis<br>
+               
+                                </p>
+                
+                            </article>
+                        </section>
+                
+                    </div> -->
+                
+                    <br><br>
+                    
                     </div>
 
-                    <div class="col-xs-4 col-sm-4 col-md-4">
-                        <a href="/side_effects"><h3><em>Side Effect Analysis</em></h3></a>
-                        <a href="/side_effects"><button><img src="../static/css/bc3-button.jpg" /></button></a>
-                        <p><em>Delve into our analysis of the birth control experience. Learn which side effects 
-                                are mentioned the most for each method, which options users are most satisfied with, and 
-                                which options fall behind.</em></p>
-                    </div>
+                    <div class="row" style="text-align: center">
+                        <div class="site-nav">
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                            <a href="/table"><h3><em>User Reviews</em></h3></a>
+                            <a href="/table"><button><img src="../static/css/contraception-thoughts-button.jpg" /></button></a>
+                            <p><em>Check out real user reviews, sort through the various methods of female contraception, 
+                                    and search for comments about specific side effects.</em></p>
+                                </div>
 
-                    <div class="col-xs-4 col-sm-4 col-md-4">
-                        <a href="/news"><h3><em>Recent News</em></h3></a>
-                        <a href="/news"><button><img src="../static/css/dude-pill-button.jpg" /></button></a>
-                        <p><em>What does the future of contraception look like?</em></p>
-                    </div>
-                </div>
-            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <a href="/side_effects"><h3><em>Side Effect Analysis</em></h3></a>
+                                <a href="/side_effects"><button><img src="../static/css/bc3-button.jpg" /></button></a>
+                                <p><em>Delve into our analysis of the birth control experience. Learn which side effects 
+                                        are mentioned the most for each method, which options users are most satisfied with, and 
+                                        which options fall behind.</em></p>
+                                    </div>
+
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                    <a href="/news"><h3><em>Recent News</em></h3></a>
+                                    <a href="/news"><button><img src="../static/css/dude-pill-button.jpg" /></button></a>
+                                    <p><em>What does the future of contraception look like?</em></p>
+                                        </div>
+
+                                        <div class="col-xs-3 col-sm-3 col-md-3">
+                                            <a href="/predictions"><h3><em>Predictions</em></h3></a>
+                                            <a href="/predictions"><button><img src="../static/css/theVillain-button.jpg" /></button></a>
+                                            <p><em>Can our AI guess your birth control?</em></p>
+                                                </div>
+                                </div>
+                            </div>
+  
 
             <hr>
 
