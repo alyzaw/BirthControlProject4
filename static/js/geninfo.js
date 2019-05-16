@@ -38,13 +38,13 @@ function openTab(tabName) {
         }
     }
 
-    var nextTab = 0;
-   for(var i=0;i<open_tabs.length;i++) {
+   // nextTab = (nextTab+1)%3;
+    for(var i=0;i<open_tabs.length;i++) {
         if(open_tabs[i] == "") {
-           available = i;
-           break;
+            available = i;
+            break;
         }
-   }
+    }
     
 
     console.log("" + available + " " + matched);
