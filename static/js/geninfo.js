@@ -22,6 +22,7 @@ var item_fact9s = ['91%', '91%', '99%', '99%', '91%', '94%', '91%', '99%'];
 var item_fact10s = ['No', 'No', 'No', 'No', 'No', 'No', 'No', 'No'];
 var item_fact11s = ['Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'Yes'];
 
+var nextTab=0;
 var open_tabs = ["", "", ""]; //currently open tabs
 
 function closeTab(tabNumber) {
@@ -37,13 +38,13 @@ function openTab(tabName) {
         }
     }
 
-    var available = -1;
-    for(var i=0;i<open_tabs.length;i++) {
+    var nextTab = 0;
+   for(var i=0;i<open_tabs.length;i++) {
         if(open_tabs[i] == "") {
-            available = i;
-            break;
+           available = i;
+           break;
         }
-    }
+   }
     
 
     console.log("" + available + " " + matched);
