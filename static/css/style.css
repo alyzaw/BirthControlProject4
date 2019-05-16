@@ -232,7 +232,7 @@
   padding: 20px;
   margin: 0;
   /* background-image: url("../css/robobc2.png"); */
-  background-image: url("../css/robobanner.png");
+  background-image: url("../css/robobc2.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -703,6 +703,15 @@ background-color: none;
     height: 320px;
     padding: 10px;
     background-size: 165%;
+    background-position: top center;
+    font-size: 18px;
+  }
+
+  .hero-page5 {
+    position: relative;
+    height: 320px;
+    padding: 10px;
+    background-size: 200%;
     background-position: top center;
     font-size: 18px;
   }
