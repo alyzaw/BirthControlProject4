@@ -11,6 +11,10 @@
   color: #ffd87d;
 }
 
+#Submitbutton:hover {
+  background-color: #85C441;
+}
+
 #result-img {
   margin-left: auto;
   margin-right: auto;
