@@ -202,6 +202,7 @@ def alyza():
     return render_template("alyza.html")
 
 
+
 @app.route("/news")
 def scrape_news():
     query = "Male Contraception"
